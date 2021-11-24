@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
+import {
+  header,
+  container,
+  content,
+  isHomepage,
+} from 'src/components/Layout/layout.module.scss'
+import { NAVY, NONE, WHITE } from 'src/components/constants'
 import { Link } from 'gatsby'
-import { Head } from 'src/components/Head'
+import Head from 'src/components/Head'
 import 'src/styles/reset.css'
 import 'src/styles/variables.scss'
 import 'src/styles/global.scss'
-import { header, container, content, isHomepage } from './layout.module.scss'
 import Logo from 'src/images/logo.opt'
 
 export default function Layout({
@@ -13,14 +19,19 @@ export default function Layout({
   description = null,
   image = null,
   path = null,
-  maxWidth = '1380px',
 }) {
-  const white = '#fff'
-  const navy = '#021f37'
-  const [logoColor, setLogoColor] = useState(navy)
+  const defaultColor = {
+    outline: NAVY,
+    inner: NONE,
+  }
+  const hovered = {
+    outline: WHITE,
+    inner: NAVY,
+  }
+  const [logoColor, setLogoColor] = useState(defaultColor)
 
   const handleOnHover = () => {
-    setLogoColor(color => (color === navy ? white : navy))
+    setLogoColor(color => (color.outline === NAVY ? hovered : defaultColor))
   }
 
   return (
@@ -30,11 +41,15 @@ export default function Layout({
         <div className={container}>
           <Link
             to='/'
-            className='has-border border-dark'
             onMouseEnter={handleOnHover}
             onMouseLeave={handleOnHover}
           >
-            <Logo className='logo' fill={logoColor} title='logo' />
+            <Logo
+              className='logo'
+              outline={logoColor.outline}
+              inner={logoColor.inner}
+              title='logo'
+            />
           </Link>
           <nav>
             <Link to='/about'>Quebec3について</Link>

@@ -2,7 +2,7 @@
 
 html,
 body {
-  background: $black;
+  background: $navy;
   font-family: 'Helvetica Neue', Arial, 'Oxygen-Sans',
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   font-size: $baseFontSize;
@@ -19,7 +19,7 @@ p,
 a,
 ul,
 time {
-  color: $white;
+  color: $whiteText;
 }
 
 a {
@@ -30,7 +30,7 @@ a {
     &:focus,
     &:hover {
       &.border-dark {
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $navy;
       }
       border-bottom: $borderWidth solid $yellow;
       color: $yellow;
@@ -42,7 +42,7 @@ button {
   background: $primaryColor;
   border: 1px solid $primaryColor;
   border-radius: $borderRadius;
-  color: $black;
+  color: $navy;
   font-size: 1rem;
   height: 45px;
   padding: 0 1.25rem;
@@ -58,7 +58,7 @@ img {
   display: block;
 }
 
-.post-title {
-  font-size: $large;
-  font-weight: bold;
-}
+// .post-title {
+//   font-size: $large;
+//   font-weight: bold;
+// }

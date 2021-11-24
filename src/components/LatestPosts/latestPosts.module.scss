@@ -1,0 +1,49 @@
+@import 'src/styles/variables';
+
+.list-item {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 120px auto 140px;
+}
+
+.post-title {
+  font-size: $large;
+  font-weight: bold;
+  white-space: normal;
+
+  &:hover,
+  &:active {
+    color: $yellow;
+  }
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.post-info {
+  overflow: hidden;
+}
+
+.cta {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.latest-posts {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 1.5rem;
+  list-style: none;
+}
+
+// latestPosts,
+// listItem,
+// thumb,
+// postInfo,
+// postTitle,
+// ellipsis,
+// cta,
