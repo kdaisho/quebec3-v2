@@ -8,9 +8,9 @@ module.exports = {
       'https://res.cloudinary.com/de9x7yfyb/image/upload/v1637543915/samples/qc3/profile/2021-profile-bright-opt_alp6vj.jpg',
   },
   plugins: [
-    'gatsby-plugin-root-import', // This enables absolute paths for import (e.g. 'src/components' instead of '../../components')
+    'gatsby-plugin-root-import', // Enables absolute paths for import (e.g. 'src/components' instead of '../../components')
     'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet', // This enables to set HTML head element
+    'gatsby-plugin-react-helmet', // Enables to set HTML head element
 
     // This set of plugins is to enable creating MDX blog posts from the src/posts folder
     {
