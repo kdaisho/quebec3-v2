@@ -4,7 +4,7 @@ import { Head } from 'src/components/Head'
 import 'src/styles/reset.css'
 import 'src/styles/variables.scss'
 import 'src/styles/global.scss'
-import { header, container, content } from './layout.module.scss'
+import { header, container, content, isHomepage } from './layout.module.scss'
 import Logo from 'src/images/logo.opt'
 
 export default function Layout({
@@ -30,6 +30,7 @@ export default function Layout({
         <div className={container}>
           <Link
             to='/'
+            className='has-border border-dark'
             onMouseEnter={handleOnHover}
             onMouseLeave={handleOnHover}
           >
@@ -40,9 +41,7 @@ export default function Layout({
           </nav>
         </div>
       </header>
-      <main className={content} style={{ maxWidth }}>
-        {children}
-      </main>
+      <main className={`${content} ${isHomepage}`}>{children}</main>
     </>
   )
 }

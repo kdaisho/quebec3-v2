@@ -25,10 +25,40 @@ time {
 a {
   border-bottom: transparent;
   text-decoration: none;
-  &:hover,
-  &:focus {
-    // border-bottom: $primaryColor;
-    border-bottom: $borderWidth solid $yellow;
-    color: $yellow;
+
+  &.has-border {
+    &:focus,
+    &:hover {
+      &.border-dark {
+        border-bottom: 2px solid $black;
+      }
+      border-bottom: $borderWidth solid $yellow;
+      color: $yellow;
+    }
   }
+}
+
+button {
+  background: $primaryColor;
+  border: 1px solid $primaryColor;
+  border-radius: $borderRadius;
+  color: $black;
+  font-size: 1rem;
+  height: 45px;
+  padding: 0 1.25rem;
+
+  &:hover {
+    background: transparent;
+    color: $primaryColor;
+    cursor: pointer;
+  }
+}
+
+img {
+  display: block;
+}
+
+.post-title {
+  font-size: $large;
+  font-weight: bold;
 }

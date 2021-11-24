@@ -26,14 +26,6 @@
       }
     }
   }
-  nav {
-    a {
-      &:focus,
-      &:hover {
-        border-bottom: 2px solid $black;
-      }
-    }
-  }
 }
 
 .container {
@@ -50,6 +42,10 @@
   max-width: $postMaxWidth;
   padding: 0 1.5rem;
   width: 100%;
+
+  &.is-homepage {
+    max-width: $pageMaxWidth;
+  }
 }
 
 @keyframes shake {

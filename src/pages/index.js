@@ -31,20 +31,25 @@ export default function IndexPage() {
           <ul className={latestPosts}>
             {posts.map(post => (
               <li key={post.id}>
-                <img
-                  className='left'
-                  data-url={post.frontmatter.thumb}
-                  src={post.frontmatter.thumb}
-                  alt={post.frontmatter.title}
-                />
+                <Link to={post.slug}>
+                  <img
+                    className='left'
+                    data-url={post.frontmatter.thumb}
+                    src={post.frontmatter.thumb}
+                    alt={post.frontmatter.title}
+                  />
+                </Link>
                 <div className='right'>
-                  <Link className='cta' to={post.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <p>{post.frontmatter.description}</p>
-                  <time datetime={post.frontmatter.date}>
-                    {post.frontmatter.date}
-                  </time>
+                  <div className='right-left'>
+                    <Link className='post-title has-border' to={post.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                    <p>{post.frontmatter.description}</p>
+                    <time datetime={post.frontmatter.date}>
+                      {post.frontmatter.date}
+                    </time>
+                  </div>
+                  <button className='right-right'>続きを読む</button>
                 </div>
               </li>
             ))}
