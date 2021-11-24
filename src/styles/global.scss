@@ -2,11 +2,11 @@
 
 html,
 body {
-  background: $white;
+  background: $black;
   font-family: 'Helvetica Neue', Arial, 'Oxygen-Sans',
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: $baseFontSize;
+  line-height: $lineHeight;
 }
 
 h1,
@@ -14,17 +14,21 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: $black;
+h6,
+p,
+a,
+ul,
+time {
+  color: $white;
 }
 
 a {
   border-bottom: transparent;
-  color: $black;
   text-decoration: none;
   &:hover,
   &:focus {
-    border-bottom: $primaryColor;
-    color: $primaryColor;
+    // border-bottom: $primaryColor;
+    border-bottom: $borderWidth solid $yellow;
+    color: $yellow;
   }
 }

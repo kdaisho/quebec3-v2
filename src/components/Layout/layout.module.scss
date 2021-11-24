@@ -4,17 +4,19 @@
   align-items: center;
   background: $primaryColor;
   box-shadow: 0 0 $shadowSize rgba(0, 0, 0, 0.75);
-  color: $white;
+  color: $black;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   svg {
     width: 160px;
   }
   a {
-    color: inherit;
+    align-items: center;
+    color: $black;
     border-bottom: 2px solid transparent;
-    display: inline-block;
+    display: flex;
+    font-weight: bold;
     text-decoration: none;
     transform: translateY(2px);
     &:focus,
@@ -28,7 +30,7 @@
     a {
       &:focus,
       &:hover {
-        border-bottom: 2px solid $white;
+        border-bottom: 2px solid $black;
       }
     }
   }
@@ -39,16 +41,15 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: $pageMaxWidth;
   width: 100%;
 }
 
 .content {
   margin: 2rem auto;
+  max-width: $postMaxWidth;
+  padding: 0 1.5rem;
   width: 100%;
-  @media (min-width: $largerThanTablet) {
-    max-width: $maxWidth;
-  }
 }
 
 @keyframes shake {

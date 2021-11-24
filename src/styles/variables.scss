@@ -1,15 +1,19 @@
-// color
-// $primaryColor: #4403ff;
-$primaryColor: #0336ff;
-$black: #252525;
-$gray: #555;
-// $white: #efefef;
-$white: #f8f8f8;
-$yellow: #ffde03;
+// font
+$baseFontSize: 18px;
+$large: 1.5rem;
+$lineHeight: 1.8;
 
-// media query
+// color
+$primaryColor: #bdddff;
+$black: #021f37;
+$white: #d6deeb;
+$yellow: #ffca28;
+
+// breakpoint
 $largerThanTablet: 601px;
 
 // others
+$borderWidth: 2px;
 $shadowSize: 12px;
-$maxWidth: 740px;
+$postMaxWidth: 740px;
+$pageMaxWidth: 1380px;

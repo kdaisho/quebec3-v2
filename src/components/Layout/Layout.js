@@ -13,13 +13,14 @@ export default function Layout({
   description = null,
   image = null,
   path = null,
+  maxWidth = '1380px',
 }) {
-  const yellow = '#ffff00'
   const white = '#fff'
-  const [logoColor, setLogoColor] = useState(white)
+  const navy = '#021f37'
+  const [logoColor, setLogoColor] = useState(navy)
 
   const handleOnHover = () => {
-    setLogoColor(color => (color === white ? yellow : white))
+    setLogoColor(color => (color === navy ? white : navy))
   }
 
   return (
@@ -35,11 +36,13 @@ export default function Layout({
             <Logo className='logo' fill={logoColor} title='logo' />
           </Link>
           <nav>
-            <Link to='/about'>Quebec3とは</Link>
+            <Link to='/about'>Quebec3について</Link>
           </nav>
         </div>
       </header>
-      <main className={content}>{children}</main>
+      <main className={content} style={{ maxWidth }}>
+        {children}
+      </main>
     </>
   )
 }

@@ -1,5 +1,51 @@
 @import 'src/styles/variables';
 
+.homepage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: $pageMaxWidth;
+  padding: 1.5rem 0;
+
+  > [class='left'] {
+    max-width: calc($pageMaxWidth - 300px);
+    width: 100%;
+  }
+  > [class='right'] {
+    width: 260px;
+  }
+}
+
+.latest-posts {
+  list-style: none;
+  li {
+    display: flex;
+    flex-flow: row wrap;
+    [class='right'] {
+      width: calc(100% - 140px);
+    }
+
+    [class='cta'] {
+      font-size: $large;
+      font-weight: bold;
+    }
+
+    img {
+      margin-right: 1rem;
+    }
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: calc(100% - 100px);
+    }
+    span,
+    time {
+      display: block;
+    }
+  }
+}
+
 .profile {
   align-items: center;
   background: $primaryColor;

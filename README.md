@@ -8,3 +8,10 @@ Quebec3 Blog - Revamp using Gatsby
 - Run `npm run dev`
 - Open `http://localhost:8000`
 - GraphQL playground is available at `http://localhost:8000/___graphql`
+
+## How to clear cache
+
+- Stop the development server
+- Run `npm run clean` - this removes `.cache` and `public` folder
+
+Make sure to stop the server first, otherwise the clean command cannot remove `public` folder and you won't be able to run the server again
