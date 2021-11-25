@@ -1,8 +1,8 @@
-@import 'src/styles/variables';
+@use 'src/styles/variables' as *;
 
 .list-item {
   display: grid;
-  grid-gap: 1.25rem;
+  gap: 1.25rem;
   grid-template-columns: 120px auto 140px;
 }
 
@@ -36,6 +36,6 @@
 .latest-posts {
   display: grid;
   grid-template-rows: 1fr;
-  grid-gap: 1.5rem;
+  gap: 1.5rem;
   list-style: none;
 }
