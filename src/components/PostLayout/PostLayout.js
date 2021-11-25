@@ -1,7 +1,3 @@
-import React from 'react'
-import Layout from 'src/components/Layout'
-import BackToHome from 'src/components/BackToHome'
-import { ARTICLE_WIDTH } from 'src/components/constants'
 import {
   header,
   heroImage,
@@ -9,6 +5,10 @@ import {
   keywords,
   footerNav,
 } from './postLayout.module.scss'
+import { ARTICLE_WIDTH } from 'src/components/constants'
+import BackToHome from 'src/components/BackToHome'
+import Layout from 'src/components/Layout'
+import React from 'react'
 
 export default function PostLayout({ children, pageContext }) {
   const { date, title, description, hero, tags, timeToRead } =

@@ -12,7 +12,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": ""
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
