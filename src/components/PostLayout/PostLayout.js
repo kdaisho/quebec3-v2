@@ -11,8 +11,7 @@ import Layout from 'src/components/Layout'
 import React from 'react'
 
 export default function PostLayout({ children, pageContext }) {
-  const { date, title, description, hero, tags, timeToRead } =
-    pageContext.frontmatter
+  const { date, title, description, hero, tags } = pageContext.frontmatter
   const renderHero = hero => {
     if (hero) {
       return <img className={heroImage} src={hero} alt={title} />
