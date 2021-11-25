@@ -2,8 +2,8 @@
 
 .homepage {
   display: grid;
-  gap: 3rem;
-  grid-template-columns: auto 200px;
+  gap: 2rem;
+  grid-template-columns: auto 1fr;
   max-width: $pageMaxWidth;
   padding: 1.5rem 0;
   width: 100%;
