@@ -1,13 +1,13 @@
-import React from 'react'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import {
+  ellipsis,
   latestPosts,
   listItem,
+  middle,
   postInfo,
   postTitle,
-  ellipsis,
-  middle,
 } from 'src/components/LatestPosts/latestPosts.module.scss'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import React from 'react'
 
 export default function LatestPosts() {
   const data = useStaticQuery(graphql`

@@ -26,6 +26,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^6.0.0",
     "gatsby-plugin-root-import": "^2.0.8",
     "gatsby-plugin-sass": "^5.2.0",
     "sass": "^1.43.4"
