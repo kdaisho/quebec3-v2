@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from 'src/components/Layout'
+import BackToHome from 'src/components/BackToHome'
 
 export default function AboutPage() {
   return (
@@ -9,8 +9,7 @@ export default function AboutPage() {
       description='Quebec3は日本脱出を目指す日本人のためのブログです'
     >
       <h1>Quebec3について</h1>
-
-      <Link to='/'>Back to home</Link>
+      <BackToHome />
     </Layout>
   )
 }

@@ -1,24 +1,20 @@
 @import 'src/styles/variables';
 
 .header {
-  align-items: center;
+  @include flexbox-default;
   background: $primaryColor;
   box-shadow: 0 0 $shadowSize rgba(0, 0, 0, 0.75);
   color: $navy;
-  display: flex;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0 1rem;
+
   svg {
     width: 160px;
   }
+
   a {
-    align-items: center;
-    color: $navy;
-    border-bottom: 2px solid transparent;
-    display: flex;
-    font-weight: bold;
-    text-decoration: none;
-    transform: translateY(2px);
+    @include flexbox-default;
+
     &:focus,
     &:hover {
       svg {
@@ -28,16 +24,28 @@
   }
 
   nav {
-    a:focus,
-    a:hover {
-      border-bottom: $borderWidth solid $navy;
+    display: grid;
+    grid-gap: 0.25rem;
+    grid-template-columns: repeat(3, auto);
+    height: $headerHeight;
+
+    a {
+      @include flexbox-default;
+      color: $navy;
+      font-weight: bold;
+      padding: 0 1rem;
+
+      &:focus,
+      &:hover {
+        background: $navy;
+        color: $white;
+      }
     }
   }
 }
 
 .container {
-  align-items: center;
-  display: flex;
+  @include flexbox-default;
   justify-content: space-between;
   margin: 0 auto;
   max-width: $pageMaxWidth;
@@ -45,14 +53,8 @@
 }
 
 .content {
-  margin: 2rem auto;
-  max-width: $postMaxWidth;
-  padding: 0 1.5rem;
+  margin: 3rem auto;
   width: 100%;
-
-  &.is-homepage {
-    max-width: $pageMaxWidth;
-  }
 }
 
 @keyframes shake {

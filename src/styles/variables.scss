@@ -1,12 +1,15 @@
 // font
 $baseFontSize: 18px;
+$largest: 2rem;
 $large: 1.5rem;
+$small: 16px;
 $lineHeight: 1.8;
+$h1LineHeight: 1.4;
 
 // color
 $primaryColor: #bdddff;
 $navy: #021f37;
-$whiteText: #d6deeb;
+$white: #d6deeb;
 $yellow: #ffca28;
 
 // breakpoint
@@ -14,7 +17,13 @@ $largerThanTablet: 601px;
 
 // others
 $borderWidth: 2px;
-$borderRadius: 6px;
+$borderRadius: 4px;
 $shadowSize: 12px;
-$postMaxWidth: 740px;
+$articleMaxWidth: 680px;
 $pageMaxWidth: 1380px;
+$headerHeight: 70px;
+
+@mixin flexbox-default {
+  align-items: center;
+  display: flex;
+}

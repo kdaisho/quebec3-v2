@@ -1,4 +1,19 @@
 @import 'src/styles/variables';
+@mixin button-style {
+  background: $primaryColor;
+  border: $borderWidth solid $primaryColor;
+  border-radius: $borderRadius;
+  color: $navy;
+  font-size: $baseFontSize;
+  height: 45px;
+  padding: 0 1.25rem;
+
+  &:hover {
+    background: transparent;
+    color: $primaryColor;
+    cursor: pointer;
+  }
+}
 
 html,
 body {
@@ -18,47 +33,24 @@ h6,
 p,
 a,
 ul,
+span,
 time {
-  color: $whiteText;
+  color: $white;
 }
 
 a {
-  border-bottom: transparent;
   text-decoration: none;
 
-  &.has-border {
-    &:focus,
-    &:hover {
-      &.border-dark {
-        border-bottom: 2px solid $navy;
-      }
-      border-bottom: $borderWidth solid $yellow;
-      color: $yellow;
-    }
+  &.button-like {
+    @include button-style;
+    @include flexbox-default;
   }
 }
 
 button {
-  background: $primaryColor;
-  border: 1px solid $primaryColor;
-  border-radius: $borderRadius;
-  color: $navy;
-  font-size: 1rem;
-  height: 45px;
-  padding: 0 1.25rem;
-
-  &:hover {
-    background: transparent;
-    color: $primaryColor;
-    cursor: pointer;
-  }
+  @include button-style;
 }
 
 img {
   display: block;
 }
-
-// .post-title {
-//   font-size: $large;
-//   font-weight: bold;
-// }

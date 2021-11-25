@@ -1,0 +1,10 @@
+@import 'src/styles/variables';
+
+.back-to-home {
+  color: $white;
+
+  &:focus,
+  &:hover {
+    color: $yellow;
+  }
+}

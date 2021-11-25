@@ -3,9 +3,8 @@ import {
   header,
   container,
   content,
-  isHomepage,
 } from 'src/components/Layout/layout.module.scss'
-import { NAVY, NONE, WHITE } from 'src/components/constants'
+import { PAGE_WIDTH, LOGO } from 'src/components/constants'
 import { Link } from 'gatsby'
 import Head from 'src/components/Head'
 import 'src/styles/reset.css'
@@ -19,20 +18,9 @@ export default function Layout({
   description = null,
   image = null,
   path = null,
+  wrapperWidth = PAGE_WIDTH,
 }) {
-  const defaultColor = {
-    outline: NAVY,
-    inner: NONE,
-  }
-  const hovered = {
-    outline: WHITE,
-    inner: NAVY,
-  }
-  const [logoColor, setLogoColor] = useState(defaultColor)
-
-  const handleOnHover = () => {
-    setLogoColor(color => (color.outline === NAVY ? hovered : defaultColor))
-  }
+  const [logoColor, setLogoColor] = useState(LOGO.DEFAULT)
 
   return (
     <>
@@ -41,8 +29,8 @@ export default function Layout({
         <div className={container}>
           <Link
             to='/'
-            onMouseEnter={handleOnHover}
-            onMouseLeave={handleOnHover}
+            onMouseEnter={() => setLogoColor(LOGO.HOVERED)}
+            onMouseLeave={() => setLogoColor(LOGO.DEFAULT)}
           >
             <Logo
               className='logo'
@@ -52,11 +40,15 @@ export default function Layout({
             />
           </Link>
           <nav>
+            <Link to='/'>ホーム</Link>
+            <Link to='/posts'>記事一覧</Link>
             <Link to='/about'>Quebec3について</Link>
           </nav>
         </div>
       </header>
-      <main className={`${content} ${isHomepage}`}>{children}</main>
+      <main className={content} style={{ maxWidth: wrapperWidth }}>
+        {children}
+      </main>
     </>
   )
 }

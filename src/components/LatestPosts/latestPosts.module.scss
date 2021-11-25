@@ -2,7 +2,7 @@
 
 .list-item {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.25rem;
   grid-template-columns: 120px auto 140px;
 }
 
@@ -12,7 +12,7 @@
   white-space: normal;
 
   &:hover,
-  &:active {
+  &:focus {
     color: $yellow;
   }
 }
@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-.cta {
+.middle {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -39,11 +39,3 @@
   grid-gap: 1.5rem;
   list-style: none;
 }
-
-// latestPosts,
-// listItem,
-// thumb,
-// postInfo,
-// postTitle,
-// ellipsis,
-// cta,

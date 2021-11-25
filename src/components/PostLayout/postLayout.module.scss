@@ -1,0 +1,64 @@
+@import 'src/styles/variables';
+@mixin img-style {
+  max-width: $articleMaxWidth;
+  width: 100%;
+}
+
+.heroImage {
+  @include img-style;
+}
+
+.header {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: auto;
+  padding: 1.5rem 0;
+
+  h1 {
+    font-size: $largest;
+    line-height: $h1LineHeight;
+  }
+}
+
+.article {
+  img {
+    @include img-style;
+  }
+
+  h2 {
+    padding: 2rem 0 0.25rem;
+  }
+
+  p {
+    padding: 0.75rem 0;
+  }
+}
+
+.keywords {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 0.5rem;
+
+  li {
+    @include flexbox-default;
+    background: $primaryColor;
+    background: $yellow;
+    border-radius: $borderRadius;
+    color: $navy;
+    font-size: $small;
+    margin: 0 0.75rem 0.75rem 0;
+    padding: 0 0.75rem;
+  }
+}
+
+.footer-nav {
+  padding: 2rem 0;
+
+  a {
+    &:hover,
+    &:focus {
+      color: $yellow;
+    }
+  }
+}
