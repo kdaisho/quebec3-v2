@@ -9,6 +9,10 @@ Quebec3 Blog - Revamp using Gatsby
 - Open `http://localhost:8000`
 - GraphQL playground is available at `http://localhost:8000/___graphql`
 
+## Eslint
+
+Eslint has been set. To use it, install eslint either locally or globally (globally is recommended)
+
 ## Troubleshooting
 
 ### I can't see my changes
