@@ -64,3 +64,10 @@
     @include text-link-hover;
   }
 }
+
+blockquote {
+  p {
+    font-style: italic;
+    color: $primaryColor;
+  }
+}
