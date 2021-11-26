@@ -1,6 +1,6 @@
-import React from 'react'
-import Layout from 'src/components/Layout'
 import BackToHome from 'src/components/BackToHome'
+import Layout from 'src/components/Layout'
+import React from 'react'
 
 export default function Posts() {
   return (

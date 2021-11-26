@@ -3,7 +3,7 @@ $baseFontSize: 18px;
 $largest: 2rem;
 $large: 1.5rem;
 $small: 16px;
-$lineHeight: 1.8;
+$lineHeight: 2;
 $h1LineHeight: 1.4;
 
 // color
@@ -23,8 +23,16 @@ $articleMaxWidth: 680px;
 $pageMaxWidth: 1380px;
 $headerHeight: 70px;
 $cardWidth: 240px;
+$hoverOpacity: 0.6;
 
 @mixin flexbox-default {
   align-items: center;
   display: flex;
+}
+
+@mixin text-link-hover {
+  &:focus,
+  &:hover {
+    color: $yellow;
+  }
 }

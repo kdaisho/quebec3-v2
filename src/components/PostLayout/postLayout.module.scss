@@ -32,6 +32,11 @@
   p {
     padding: 0.75rem 0;
   }
+
+  a {
+    @include text-link-hover;
+    text-decoration: underline;
+  }
 }
 
 .keywords {
@@ -56,9 +61,6 @@
   padding: 2rem 0;
 
   a {
-    &:hover,
-    &:focus {
-      color: $yellow;
-    }
+    @include text-link-hover;
   }
 }

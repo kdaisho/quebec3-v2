@@ -1,7 +1,7 @@
 @use 'src/styles/variables' as *;
 
 .card {
-  background: $white;
+  background: $primaryColor;
   border-radius: $borderRadius;
   padding: 1rem;
   width: $cardWidth;

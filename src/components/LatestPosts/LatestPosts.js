@@ -7,6 +7,7 @@ import {
   postInfo,
   postTitle,
 } from 'src/components/LatestPosts/latestPosts.module.scss'
+import { DEFAULT_THUMB } from 'src/components/constants'
 import React from 'react'
 
 export default function LatestPosts() {
@@ -14,14 +15,14 @@ export default function LatestPosts() {
     query GetBlogPosts {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
+          frontmatter {
+            date(formatString: "YYYY年M月DD日")
+            thumb
+            title
+            description
+          }
           id
           slug
-          frontmatter {
-            date
-            description
-            title
-            thumb
-          }
         }
       }
     }
@@ -32,11 +33,14 @@ export default function LatestPosts() {
     <ul className={latestPosts}>
       {posts.map(post => (
         <li key={post.id} className={listItem}>
-          <img src={post.frontmatter.thumb} alt={post.frontmatter.title} />
+          <Link className={postTitle} to={post.slug}>
+            <img
+              src={post.frontmatter.thumb || DEFAULT_THUMB}
+              alt={post.frontmatter.title}
+            />
+          </Link>
           <div className={postInfo}>
-            <Link className={postTitle} to={post.slug}>
-              {post.frontmatter.title}
-            </Link>
+            <h2 className={postTitle}>{post.frontmatter.title}</h2>
             <p className={ellipsis}>{post.frontmatter.description}</p>
             <time dateTime={post.frontmatter.date}>
               {post.frontmatter.date}

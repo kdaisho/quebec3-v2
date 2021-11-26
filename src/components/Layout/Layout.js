@@ -1,16 +1,16 @@
+import { LOGO, PAGE_WIDTH } from 'src/components/constants'
 import React, { useState } from 'react'
 import {
-  header,
   container,
   content,
+  header,
 } from 'src/components/Layout/layout.module.scss'
-import { PAGE_WIDTH, LOGO } from 'src/components/constants'
-import { Link } from 'gatsby'
 import Head from 'src/components/Head'
-import 'src/styles/reset.css'
-import 'src/styles/variables.scss'
-import 'src/styles/global.scss'
+import { Link } from 'gatsby'
 import Logo from 'src/images/logo.opt'
+import 'src/styles/global.scss'
+import 'src/styles/variables.scss'
+import 'src/styles/reset.css'
 
 export default function Layout({
   children,

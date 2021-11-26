@@ -1,8 +1,8 @@
+import LatestPosts from 'src/components/LatestPosts'
+import Layout from 'src/components/Layout'
+import Profile from 'src/components/Profile'
 import React from 'react'
 import { homepage } from 'src/styles/index.module.scss'
-import Layout from 'src/components/Layout'
-import LatestPosts from 'src/components/LatestPosts'
-import Profile from 'src/components/Profile'
 
 export default function IndexPage() {
   return (

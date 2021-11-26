@@ -3,8 +3,5 @@
 .back-to-home {
   color: $white;
 
-  &:focus,
-  &:hover {
-    color: $yellow;
-  }
+  @include text-link-hover;
 }
