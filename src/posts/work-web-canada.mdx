@@ -7,6 +7,8 @@ hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/
 tags: ['プログラミング', '社会', '労働', '海外就職']
 ---
 
+import { IFRAME } from 'src/components/constants'
+
 日本の皆さんこんちは。
 
 久しぶりに何か書くかな。
@@ -72,12 +74,15 @@ tags: ['プログラミング', '社会', '労働', '海外就職']
 比較的若い業界だからっていうのもあるが、ここは様々なバックグラウンドの人間を受け入れる寛容さと成長の可能性を持っている。
 また、今後何十年も成長が止まらないのは明白であり、北米に限った話ではないが実際全然人が足りてない。今後もこの需要を満たすほど供給が育つ見込みは薄いと言われてる。
 
-<iframe
-  src='https://www.youtube.com/embed/nKIu9yen5nc?start=149'
-  width='560'
-  height='315'
-  frameborder='0'
-></iframe>
+<div class='iframe-container'>
+  <iframe
+    style='border:0;'
+    src='https://www.youtube.com/embed/nKIu9yen5nc?start=149'
+    width={IFRAME.WIDTH}
+    height={IFRAME.HEIGHT}
+    frameborder='0'
+  ></iframe>
+</div>
 
 全人口がウェブサイトやサービスを欲しがるような時代にありながら、それをまともに作れる奴がその 1%もいないのだ。
 

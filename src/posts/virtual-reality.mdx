@@ -7,6 +7,8 @@ hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/
 tags: ['日本', '趣味']
 ---
 
+import { IFRAME } from 'src/components/constants'
+
 「ぎぃ〜ガチャ、へチョッ」
 
 さて、この音はなんでしょう？
@@ -19,12 +21,14 @@ tags: ['日本', '趣味']
 
 機械化釣り堀を買いました。高いんだか安いんだかよくわかんない 11 ドル。レジで「カエルちゃんバージョンもあるんだよ。」とオヤジに言われたけど丁重に断った。カエルが釣りにかかるわけないじゃん。
 
-<iframe
-  src='//www.youtube.com/embed/5EzOTKiFKSQ'
-  width='560'
-  height='315'
-  frameborder='0'
-></iframe>
+<div class='iframe-container'>
+  <iframe
+    src='//www.youtube.com/embed/5EzOTKiFKSQ'
+    width={IFRAME.WIDTH}
+    height={IFRAME.HEIGHT}
+    frameborder='0'
+  ></iframe>
+</div>
 
 この機械化釣り堀も Virtual Reality
 

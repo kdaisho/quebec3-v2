@@ -7,6 +7,8 @@ hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/
 tags: ['社会', '労働', '海外就職']
 ---
 
+import { IFRAME } from 'src/components/constants'
+
 日本の皆さんこんちは。面接行ってきた１の続きです。
 
 一気に面接 2 コもこなしたけど、まぁあんまり期待しないで職探しは続けようと思う。
@@ -35,12 +37,15 @@ tags: ['社会', '労働', '海外就職']
 
 あああああああ
 
-<iframe
-  src='//www.youtube.com/embed/Qn4cBBOBGv8'
-  width='562'
-  height='315'
-  frameborder='0'
-></iframe>
+<div class='iframe-container'>
+  <iframe
+    style='border:0;'
+    src='//www.youtube.com/embed/Qn4cBBOBGv8'
+    width={IFRAME.WIDTH}
+    height={IFRAME.HEIGHT}
+    frameborder='0'
+  ></iframe>
+</div>
 
 ＊実際の光景です。
 

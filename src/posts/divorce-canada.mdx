@@ -7,6 +7,8 @@ hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/
 tags: ['社会', '英語']
 ---
 
+import { IFRAME } from 'src/components/constants'
+
 日本の皆さんこんちは。
 
 今日はカナダから離婚届を出す方法についてでも書きましょかね。katakatakata...
@@ -88,15 +90,15 @@ tags: ['社会', '英語']
 これはカナダ側から手に入れる書類。モントリオールなら Palais de justice de Montréal で手に入れることができる。役所らしく平日しか開いてないが、一階一番奥の窓口に行って離婚のケースナンバーと氏名を言えばその場でかつ無料で発効してくれる。
 一応身分証は持参したほうが良い。
 
-{' '}
-
-<iframe
-  style='border:0;'
-  src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11184.637947729043!2d-73.5557873!3d45.506868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x407b1bd6001f4eb2!2sMontreal+Courthouse!5e0!3m2!1sen!2sca!4v1514225748327'
-  width='600'
-  height='450'
-  frameborder='0'
-></iframe>
+<div class='iframe-container'>
+  <iframe
+    style='border:0;'
+    src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11184.637947729043!2d-73.5557873!3d45.506868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x407b1bd6001f4eb2!2sMontreal+Courthouse!5e0!3m2!1sen!2sca!4v1514225748327'
+    width={IFRAME.WIDTH}
+    height={IFRAME.HEIGHT}
+    frameborder='0'
+  ></iframe>
+</div>
 
 Palais de justice de Montréal
 

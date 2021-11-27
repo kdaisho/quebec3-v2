@@ -28,7 +28,6 @@ export default function PostLayout({ children, pageContext }) {
         {tags && <Tags tags={tags} cname={keywords} />}
       </div>
       <article className={article}>{children}</article>
-
       <nav className={footerNav}>
         <BackToHome />
       </nav>

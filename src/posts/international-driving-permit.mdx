@@ -7,6 +7,8 @@ hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/
 tags: [社会', '海外就職', '日本人']
 ---
 
+import { IFRAME } from 'src/components/constants'
+
 日本人の皆さんこんにちは、
 
 突然ですが、あなたは今年の抱負をきちんと決めましたか？
@@ -35,13 +37,15 @@ tags: [社会', '海外就職', '日本人']
 
 必要書類と写真を郵送しても手に入れることができるらしいのだが 3 週間くらいかかるそうなので、いっそのことオフィスまで出向いた方が手っ取り早い。CAA-Quebec Registration Center というオフィスが対応丁寧なのでそこに出向くことに。実は去年もここでやった。地下鉄駅 Lucien-L'Allier から徒歩 5 分とアクセスも良い。
 
-<iframe
-  style='border:0;'
-  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89497.19604973428!2d-73.63780812828482!3d45.494226264810294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11d00f9f90aa2525!2sCAA-Quebec+Registration+Center!5e0!3m2!1sen!2sca!4v1515200032035'
-  width='600'
-  height='450'
-  frameborder='0'
-></iframe>
+<div class='iframe-container'>
+  <iframe
+    style='border:0;'
+    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89497.19604973428!2d-73.63780812828482!3d45.494226264810294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x11d00f9f90aa2525!2sCAA-Quebec+Registration+Center!5e0!3m2!1sen!2sca!4v1515200032035'
+    width={IFRAME.WIDTH}
+    height={IFRAME.HEIGHT}
+    frameborder='0'
+  ></iframe>
+</div>
 
 ![CAAのオフィス外観](https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734537/qc3/posts/international-driving-permit/caa_cnuavw.jpg)オフィスの外観はこんな感じ。
 
