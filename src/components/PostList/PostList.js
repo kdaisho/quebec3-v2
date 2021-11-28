@@ -15,7 +15,7 @@ export default function PostList({ posts }) {
     <ul className={latestPosts}>
       {posts.map(post => (
         <li key={post.id} className={listItem}>
-          <Link className={postTitle} to={post.slug}>
+          <Link className={postTitle} to={`/${post.slug}`}>
             <img
               src={post.frontmatter.thumb || DEFAULT_THUMB}
               alt={post.frontmatter.title}

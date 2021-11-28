@@ -1,15 +1,18 @@
 import Layout from 'src/components/Layout'
-import { Pagination } from 'src/components/Pagination'
+import Pagination from 'src/components/Pagination'
 import PostList from 'src/components/PostList'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-const BlogList = ({ data }) => {
+const BlogList = ({ data, pageContext }) => {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
       <h1>投稿記事一覧</h1>
       <PostList posts={data.allMdx.nodes} />
-      <Pagination totalCount={data.allMdx.totalCount} />
+      <Pagination
+        totalCount={data.allMdx.totalCount}
+        currentPage={pageContext.currentPage}
+      />
     </Layout>
   )
 }
@@ -27,6 +30,9 @@ export const query = graphql`
         ...BlogListFragment
       }
       totalCount
+      pageInfo {
+        currentPage
+      }
     }
   }
 `

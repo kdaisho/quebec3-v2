@@ -43,7 +43,7 @@ export default function Layout({
             </Link>
             <nav>
               <Link to='/'>ホーム</Link>
-              <Link to='/blogs'>記事一覧</Link>
+              <Link to='/blogs/1'>記事一覧</Link>
               <Link to='/about'>Quebec3について</Link>
             </nav>
           </div>

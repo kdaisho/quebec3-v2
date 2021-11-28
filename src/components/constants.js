@@ -6,8 +6,8 @@ export const IFRAME = {
 }
 
 const WHITE = '#fff'
-const NAVY = '#021f37'
 const NONE = 'none'
+const NAVY = '#021f37'
 export const LOGO = {
   DEFAULT: {
     outline: NAVY,
