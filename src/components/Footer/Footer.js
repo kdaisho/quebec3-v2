@@ -1,7 +1,7 @@
 import { LOGO } from 'src/components/constants'
 import Logo from 'src/images/Logo'
-import React from 'react'
 import { footer } from './footer.module.scss'
+import React from 'react'
 
 export default function Footer() {
   const year = new Date().getFullYear()

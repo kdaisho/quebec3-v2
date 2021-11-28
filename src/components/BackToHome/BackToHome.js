@@ -1,6 +1,6 @@
+import React from 'react'
 import ArrowLeft from 'src/images/ArrowLeft'
 import { Link } from 'gatsby'
-import React from 'react'
 import { backToHome } from './backToHome.module.scss'
 
 export default function BackToHome({ onMouseEnter, onMouseLeave, color }) {
