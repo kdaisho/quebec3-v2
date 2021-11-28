@@ -1,5 +1,5 @@
+import { card, profile, text } from 'src/components/Profile/profile.module.scss'
 import React from 'react'
-import { profile, card, text } from 'src/components/Profile/profile.module.scss'
 
 export default function Profile() {
   return (

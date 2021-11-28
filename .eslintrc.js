@@ -16,4 +16,5 @@ module.exports = {
       },
     ],
   },
+  ignorePatterns: ['src/**/*.mdx', 'src/**/*.*css'], //mdx, scss or css
 }

@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "pre-commit": "npm run lint",
     "test": "",
-    "lint": "eslint"
+    "lint": "eslint 'src/**'"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
