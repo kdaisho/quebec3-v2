@@ -1,4 +1,3 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
 import {
   ellipsis,
   latestPosts,
@@ -6,29 +5,12 @@ import {
   middle,
   postInfo,
   postTitle,
-} from 'src/components/LatestPosts/latestPosts.module.scss'
+} from 'src/components/PostList/postList.module.scss'
 import { DEFAULT_THUMB } from 'src/components/constants'
+import { Link } from 'gatsby'
 import React from 'react'
 
-export default function LatestPosts() {
-  const data = useStaticQuery(graphql`
-    query GetBlogPosts {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
-        nodes {
-          frontmatter {
-            date(formatString: "YYYY年M月DD日")
-            thumb
-            title
-            description
-          }
-          id
-          slug
-        }
-      }
-    }
-  `)
-  const posts = data?.allMdx?.nodes
-
+export default function PostList({ posts }) {
   return (
     <ul className={latestPosts}>
       {posts.map(post => (
@@ -47,7 +29,7 @@ export default function LatestPosts() {
             </time>
           </div>
           <div className={middle}>
-            <Link className='button-like' to={post.slug}>
+            <Link className='button-like' to={`/${post.slug}`}>
               続きを読む
             </Link>
           </div>

@@ -1,25 +1,20 @@
-import { Link, graphql } from 'gatsby'
 import Layout from 'src/components/Layout'
 import { Pagination } from 'src/components/Pagination'
+import PostList from 'src/components/PostList'
 import React from 'react'
+import { graphql } from 'gatsby'
 
-const BlogPage = ({ data }) => {
+const BlogList = ({ data }) => {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
       <h1>投稿記事一覧</h1>
-      <ul>
-        {data.allMdx.nodes.map(node => (
-          <li key={node.id}>
-            <Link to={`/${node.slug}`}>{node.frontmatter.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <PostList posts={data.allMdx.nodes} />
       <Pagination totalCount={data.allMdx.totalCount} />
     </Layout>
   )
 }
 
-export default BlogPage
+export default BlogList
 
 export const query = graphql`
   query ($limit: Int!, $skip: Int!) {
@@ -32,7 +27,10 @@ export const query = graphql`
         id
         slug
         frontmatter {
+          date(formatString: "YYYY年M月DD日")
+          thumb
           title
+          description
         }
       }
       totalCount
