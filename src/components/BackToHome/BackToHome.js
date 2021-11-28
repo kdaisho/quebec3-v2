@@ -2,20 +2,20 @@ import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
 import ArrowLeft from 'src/images/ArrowLeft'
 import { Link } from 'gatsby'
-import { backToHome } from './backToHome.module.scss'
+import { backTo } from './backToHome.module.scss'
 
-export default function BackToHome() {
+export default function BackToHome({ destination, text }) {
   const [color, setColor] = useState(PRIMARY)
 
   return (
     <Link
-      className={backToHome}
-      to='/'
+      className={backTo}
+      to={destination}
       onMouseEnter={() => setColor(YELLOW)}
       onMouseLeave={() => setColor(PRIMARY)}
     >
       <ArrowLeft color={color} />
-      　ホームへ戻る
+      {text}
     </Link>
   )
 }

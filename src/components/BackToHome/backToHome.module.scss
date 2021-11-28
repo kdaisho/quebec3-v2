@@ -1,9 +1,10 @@
 @use 'src/styles/variables' as *;
 
-.back-to-home {
+.back-to {
   align-items: center;
   color: $white;
   display: inline-flex;
+  gap: 0.5rem;
 
   svg {
     width: 2rem;

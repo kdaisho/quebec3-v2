@@ -10,6 +10,7 @@ export default function AboutPage() {
     >
       <h1>Quebec3について</h1>
       <BackToHome />
+      <BackToHome destination='/' text='ホームへ戻る' />
     </Layout>
   )
 }

@@ -29,7 +29,7 @@ export default function PostLayout({ children, pageContext }) {
       </div>
       <article className={article}>{children}</article>
       <nav className={footerNav}>
-        <BackToHome />
+        <BackToHome destination='/blogs/1' text='ブログ一覧' />
       </nav>
     </Layout>
   )
