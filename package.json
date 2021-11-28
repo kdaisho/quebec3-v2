@@ -15,7 +15,8 @@
     "prepare": "husky install",
     "pre-commit": "npm run lint",
     "test": "",
-    "lint": "eslint 'src/**'"
+    "lint": "eslint 'src/**'",
+    "clean-dev": "concurrently \"npm run clean\" \"npm run dev\""
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -30,6 +31,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "concurrently": "^6.4.0",
     "eslint": "^7.32.0",
     "eslint-config-react-app": "^6.0.0",
     "gatsby-plugin-root-import": "^2.0.8",
