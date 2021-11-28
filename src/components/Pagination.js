@@ -9,7 +9,7 @@ export const Pagination = ({ totalCount }) => {
   return (
     <ul>
       {pages.map(page => {
-        const to = page === 0 ? '/posts' : `/posts/${page + 1}`
+        const to = page === 0 ? '/blogs' : `/blogs/${page + 1}`
         return (
           <li key={page} className={page}>
             <Link to={to}>{page + 1}</Link>

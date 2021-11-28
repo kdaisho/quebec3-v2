@@ -1,5 +1,5 @@
 const { ITEMS_PER_PAGE } = require('./constants')
-const { getPostsPath } = require('./utils')
+const { getPath } = require('./utils')
 const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -20,8 +20,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   for (let i = 0; i < pageCount; i++) {
     createPage({
-      path: getPostsPath(i),
-      component: path.resolve('./src/templates/posts.js'),
+      path: getPath('/blogs', i),
+      component: path.resolve('./src/templates/blogs.js'),
       context: {
         limit: ITEMS_PER_PAGE,
         skip: i * ITEMS_PER_PAGE,

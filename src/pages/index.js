@@ -14,7 +14,7 @@ export default function IndexPage() {
         <LatestPosts />
         <Profile />
       </div>
-      <Link className='button-like' to='/posts'>
+      <Link className='button-like' to='/blogs'>
         記事一覧へ
       </Link>
     </Layout>

@@ -1,7 +1,7 @@
-const getPostsPath = page => {
-  return page === 0 ? '/posts' : `/posts/${page + 1}`
+const getPath = (path, page) => {
+  return page === 0 ? path : `${path}/${page + 1}`
 }
 
 module.exports = {
-  getPostsPath,
+  getPath,
 }
