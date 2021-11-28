@@ -24,14 +24,7 @@ export const query = graphql`
       skip: $skip
     ) {
       nodes {
-        id
-        slug
-        frontmatter {
-          date(formatString: "YYYY年M月DD日")
-          thumb
-          title
-          description
-        }
+        ...BlogListFragment
       }
       totalCount
     }

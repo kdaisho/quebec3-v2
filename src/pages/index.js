@@ -10,14 +10,7 @@ export default function IndexPage() {
     query GetBlogPosts {
       allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
         nodes {
-          id
-          slug
-          frontmatter {
-            date(formatString: "YYYY年M月DD日")
-            thumb
-            title
-            description
-          }
+          ...BlogListFragment
         }
       }
     }
