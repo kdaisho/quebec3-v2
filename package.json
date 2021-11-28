@@ -14,7 +14,8 @@
     "clean": "gatsby clean",
     "prepare": "husky install",
     "pre-commit": "npm run lint",
-    "test": ""
+    "test": "",
+    "lint": "eslint"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

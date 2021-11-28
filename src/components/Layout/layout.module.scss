@@ -1,5 +1,15 @@
 @use 'src/styles/variables' as *;
 
+.content-wrapper {
+  display: grid;
+  grid-template-rows: $headerHeight auto;
+  height: 100vh;
+
+  footer {
+    margin-top: auto;
+  }
+}
+
 .header {
   @include flexbox-default;
   background: $primaryColor;
@@ -27,7 +37,7 @@
     display: grid;
     gap: 0.25rem;
     grid-template-columns: repeat(3, auto);
-    height: $headerHeight;
+    height: 100%;
 
     a {
       @include flexbox-default;
@@ -47,13 +57,14 @@
 .container {
   @include flexbox-default;
   justify-content: space-between;
+  height: 100%;
   margin: 0 auto;
   max-width: $pageMaxWidth;
   width: 100%;
 }
 
 .content {
-  margin: 3rem auto;
+  margin: 3rem auto 5rem;
   width: 100%;
 }
 

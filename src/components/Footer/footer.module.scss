@@ -1,0 +1,19 @@
+@use 'src/styles/variables' as *;
+
+.footer {
+  background: $primaryColor;
+  height: 225px;
+  @include flexbox-default;
+
+  div[class='wrapper'] {
+    text-align: center;
+  }
+
+  svg {
+    width: 300px;
+  }
+
+  p {
+    color: $navy;
+  }
+}

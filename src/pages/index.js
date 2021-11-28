@@ -1,5 +1,6 @@
 import LatestPosts from 'src/components/LatestPosts'
 import Layout from 'src/components/Layout'
+import { Link } from 'gatsby'
 import Profile from 'src/components/Profile'
 import React from 'react'
 import { homepage } from 'src/styles/index.module.scss'
@@ -13,6 +14,9 @@ export default function IndexPage() {
         <LatestPosts />
         <Profile />
       </div>
+      <Link className='button-like' to='/posts'>
+        記事一覧へ
+      </Link>
     </Layout>
   )
 }

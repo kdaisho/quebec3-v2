@@ -28,6 +28,7 @@ $hoverOpacity: 0.6;
 @mixin flexbox-default {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 
 @mixin text-link-hover {

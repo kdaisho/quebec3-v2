@@ -24,6 +24,12 @@ body {
   line-height: $lineHeight;
 }
 
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
 h1,
 h2,
 h3,
@@ -53,6 +59,12 @@ button {
 
 img {
   display: block;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
 }
 
 .iframe-container {

@@ -13,7 +13,7 @@ import React from 'react'
 export default function LatestPosts() {
   const data = useStaticQuery(graphql`
     query GetBlogPosts {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
         nodes {
           frontmatter {
             date(formatString: "YYYY年M月DD日")

@@ -8,6 +8,8 @@ export const IFRAME = {
 const WHITE = '#fff'
 const NAVY = '#021f37'
 const NONE = 'none'
+export const PRIMARY = '#d6deeb'
+export const YELLOW = '#ffca28'
 
 export const LOGO = {
   DEFAULT: {

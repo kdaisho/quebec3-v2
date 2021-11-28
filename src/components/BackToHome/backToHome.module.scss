@@ -1,7 +1,13 @@
 @use 'src/styles/variables' as *;
 
 .back-to-home {
+  align-items: center;
   color: $white;
+  display: inline-flex;
+
+  svg {
+    width: 2rem;
+  }
 
   @include text-link-hover;
 }
