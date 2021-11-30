@@ -1,18 +1,18 @@
 import { Hero, Tags } from 'src/components/PostLayout/utils'
-import { Link, graphql } from 'gatsby'
 import {
   article,
   footerNav,
   header,
   heroImage,
   keywords,
-  nav,
 } from 'src/components/PostLayout/postLayout.module.scss'
 import { ARTICLE_WIDTH } from 'src/components/constants'
+import ArticleFooterNav from 'src/components/ArticleFooterNav'
 import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
+import { graphql } from 'gatsby'
 
 export const pageQuery = graphql`
   query ($slug: String!) {
@@ -65,22 +65,17 @@ const Article = ({ data, pageContext }) => {
         <time dateTime={date}>{date}</time>
         {tags && <Tags tags={tags} cname={keywords} />}
       </div>
+
       <article className={article}>
         <MDXRenderer>{body}</MDXRenderer>
       </article>
-      <nav className={nav}>
-        <Link disabled={toPrev === 'disabled' ? true : false} to={toPrev}>
-          前の記事へ
-        </Link>
-        <Link disabled={toNext === 'disabled' ? true : false} to={toNext}>
-          次の記事へ
-        </Link>
-      </nav>
+
+      <ArticleFooterNav toPrev={toPrev} toNext={toNext} />
 
       <nav className={footerNav}>
         <BackToHome
           destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}
-          text='ブログ一覧'
+          text='記事一覧へ戻る'
         />
       </nav>
     </Layout>

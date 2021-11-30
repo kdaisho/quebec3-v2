@@ -64,7 +64,9 @@
 }
 
 .content {
-  margin: 3rem auto 5rem;
+  display: grid;
+  gap: 2rem;
+  margin: 5rem auto;
   width: 100%;
 }
 

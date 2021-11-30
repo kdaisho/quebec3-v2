@@ -1,5 +1,5 @@
 import { PRIMARY, YELLOW } from 'src/components/constants'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { isRight, link, pagination } from './pagination.module.scss'
 import ArrowLeft from 'src/images/ArrowLeft'
 import { ITEMS_PER_PAGE } from 'src/components/constants'
@@ -24,7 +24,9 @@ export default function Pagination({ totalCount, currentPage }) {
       >
         <ArrowLeft color={colorLeft} /> 前へ
       </Link>
-      <span>ページ {currentPage}</span>
+      <span>
+        ページ {currentPage} / {pageCount}
+      </span>
       <Link
         className={`${link} ${isRight}`}
         disabled={next >= pageCount + 1 ? true : false}
@@ -32,7 +34,7 @@ export default function Pagination({ totalCount, currentPage }) {
         onMouseEnter={() => setColorRight(YELLOW)}
         onMouseLeave={() => setColorRight(PRIMARY)}
       >
-        次へ <ArrowLeft className='rotate' color={colorRight} />
+        次へ <ArrowLeft color={colorRight} />
       </Link>
     </nav>
   )
