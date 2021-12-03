@@ -2,7 +2,6 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
-  // parser: '@babel/eslint-parser',
   extends: 'react-app',
   rules: {
     'no-console': [1],
