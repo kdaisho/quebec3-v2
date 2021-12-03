@@ -1,14 +1,18 @@
 import { card, profile, text } from 'src/components/Profile/profile.module.scss'
 import React from 'react'
+import { SIZE } from 'src/components/constants'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Profile() {
   return (
     <aside>
       <div className={card}>
         <div className={profile}>
-          <img
-            src='https://res.cloudinary.com/de9x7yfyb/image/upload/c_scale,e_brightness:10,q_auto,r_0,w_200/v1637735204/qc3/2021-profile-crop-opt_x0qdi1.jpg'
-            alt='Kyoshin'
+          <StaticImage
+            src='../../images/profile-opt.jpg'
+            alt='kyoshin'
+            placeholder='blurred'
+            style={{ width: SIZE.PROFILE.WIDTH }}
           />
         </div>
         <div className={text}>

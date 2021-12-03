@@ -75,7 +75,7 @@ const Article = ({ data, pageContext }) => {
       <nav className={footerNav}>
         <BackToHome
           destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}
-          text='記事一覧へ戻る'
+          text='記事一覧へ戻るぞぉ'
         />
       </nav>
     </Layout>

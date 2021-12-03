@@ -19,7 +19,6 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <h1>Quebec3 - 海外移住ポータル</h1>
       <h2>最近の記事</h2>
       <div className={homepage}>
         <PostList posts={posts} />

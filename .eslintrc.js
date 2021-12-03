@@ -2,6 +2,7 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
+  // parser: '@babel/eslint-parser',
   extends: 'react-app',
   rules: {
     'no-console': [1],
@@ -16,5 +17,5 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['src/**/*.mdx', 'src/**/*.*css'], //mdx, scss or css
+  ignorePatterns: ['src/**/*.mdx', 'src/**/*.*css', 'src/images/*'], //mdx, scss or css
 }

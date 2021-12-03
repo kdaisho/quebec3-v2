@@ -1,15 +1,17 @@
-import { LOGO, PAGE_WIDTH } from 'src/components/constants'
+import { LOGO, PAGE_WIDTH, SIZE } from 'src/components/constants'
 import React, { useState } from 'react'
 import {
   container,
   content,
   contentWrapper,
   header,
+  imageWrapper,
 } from 'src/components/Layout/layout.module.scss'
 import Footer from 'src/components/Footer'
 import Head from 'src/components/Head'
 import { Link } from 'gatsby'
 import Logo from 'src/images/Logo'
+import { StaticImage } from 'gatsby-plugin-image'
 import 'src/styles/global.scss'
 import 'src/styles/variables.scss'
 import 'src/styles/reset.css'
@@ -48,6 +50,29 @@ export default function Layout({
             </nav>
           </div>
         </header>
+        <div className={imageWrapper}>
+          <div className='text-container'>
+            <div className='text'>
+              <h1>Quebec3</h1>
+              <h2>- 海外移住ポータル -</h2>
+            </div>
+            <Link className='button-like' to='/blogs/1'>
+              記事一覧
+            </Link>
+          </div>
+          <StaticImage
+            src='../../images/quebec3-cat-opt.jpg'
+            alt='black cat'
+            aspectRatio={4 / 1}
+            placeholder='blurred'
+            style={{
+              minHeight: SIZE.HERO.MIN_HEIGHT,
+              maxHeight: SIZE.HERO.MAX_HEIGHT,
+            }}
+            layout='fullWidth'
+            transformOptions={{ cropFocus: 'center' }}
+          />
+        </div>
         <main className={content} style={{ maxWidth: wrapperWidth }}>
           {children}
         </main>
