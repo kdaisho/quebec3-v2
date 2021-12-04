@@ -1,7 +1,7 @@
 import Footer from 'src/components/Footer'
-import Head from 'src/components/Head'
 import Header from 'src/components/Header'
 import React from 'react'
+import Seo from 'src/components/Seo'
 import { rootWrapper } from 'src/components/Layout/layout.module.scss'
 
 import 'src/styles/global.scss'
@@ -17,7 +17,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <Head title={title} description={description} image={image} path={path} />
+      <Seo title={title} description={description} image={image} path={path} />
       <div className={rootWrapper}>
         <Header />
         {children}
