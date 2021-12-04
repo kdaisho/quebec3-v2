@@ -4,18 +4,39 @@
   width: 100%;
 }
 
+.main {
+  display: grid;
+  gap: 2.75rem;
+  margin: 4rem auto;
+  max-width: 680px;
+  width: 100%;
+}
+
 .heroImage {
   @include img-style;
 }
 
 .header {
   display: grid;
-  gap: 0.5rem;
+  gap: 1.25rem;
   grid-template-rows: auto;
 
   h1 {
     font-size: $largest;
     line-height: $h1LineHeight;
+  }
+}
+
+.featured-image {
+  background: $secondaryColor;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 3rem 0;
+  width: 100%;
+
+  img {
+    box-shadow: 0 20px 45px -10px rgb(0 0 0 / 20%);
   }
 }
 

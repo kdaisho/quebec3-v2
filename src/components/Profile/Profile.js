@@ -16,7 +16,7 @@ export default function Profile() {
           />
         </div>
         <div className={text}>
-          <p>この人が書いてます。</p>
+          <p>性格悪そーなこの人が書いてます。</p>
           <h2>Kyoshin</h2>
           <p>
             2010年よりモントリオール在住のカナダ市民権保持者。

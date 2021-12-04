@@ -62,10 +62,10 @@ img {
   display: block;
 }
 
-.content-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  min-height: 100vh;
+.page-wrapper {
+  margin: 5rem auto;
+  max-width: $pageMaxWidth;
+  width: 100%;
 }
 
 .iframe-container {

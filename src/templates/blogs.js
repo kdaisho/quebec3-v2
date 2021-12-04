@@ -7,12 +7,14 @@ import { graphql } from 'gatsby'
 const BlogList = ({ data, pageContext }) => {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
-      <h1>投稿記事一覧</h1>
-      <PostList posts={data.allMdx.nodes} />
-      <Pagination
-        totalCount={data.allMdx.totalCount}
-        currentPage={pageContext.currentPage}
-      />
+      <div className='page-wrapper'>
+        <h1>投稿記事一覧</h1>
+        <PostList posts={data.allMdx.nodes} />
+        <Pagination
+          totalCount={data.allMdx.totalCount}
+          currentPage={pageContext.currentPage}
+        />
+      </div>
     </Layout>
   )
 }

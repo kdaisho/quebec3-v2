@@ -1,5 +1,3 @@
-export const ARTICLE_WIDTH = '680px'
-export const PAGE_WIDTH = '1380px'
 export const IFRAME = {
   HEIGHT: 382,
   WIDTH: 680,
