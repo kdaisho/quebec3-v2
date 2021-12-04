@@ -3,7 +3,7 @@ import React from 'react'
 export default function Logo({ outline = '#333333', inner = 'none' }) {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 396 94' version='1.1'>
-      <title>qc3-logo</title>
+      <title>Quebec3</title>
       <g
         id='Page-1'
         stroke='none'

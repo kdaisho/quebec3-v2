@@ -1,6 +1,6 @@
 import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
-import ArrowLeft from 'src/images/ArrowLeft'
+import ArrowLeft from 'src/svg/ArrowLeft'
 import { Link } from 'gatsby'
 import { backTo } from './backToHome.module.scss'
 

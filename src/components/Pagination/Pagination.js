@@ -1,7 +1,7 @@
 import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
 import { isRight, link, pagination } from './pagination.module.scss'
-import ArrowLeft from 'src/images/ArrowLeft'
+import ArrowLeft from 'src/svg/ArrowLeft'
 import { ITEMS_PER_PAGE } from 'src/components/constants'
 import { Link } from 'gatsby'
 

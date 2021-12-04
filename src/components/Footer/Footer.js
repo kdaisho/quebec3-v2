@@ -1,5 +1,5 @@
 import { LOGO } from 'src/components/constants'
-import Logo from 'src/images/Logo'
+import Logo from 'src/svg/Logo'
 import React from 'react'
 import { footer } from './footer.module.scss'
 

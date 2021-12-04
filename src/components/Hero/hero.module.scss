@@ -1,0 +1,36 @@
+@use 'src/styles/variables' as *;
+
+.hero-container {
+  position: relative;
+
+  img {
+    filter: brightness(0.6);
+  }
+
+  div[class='title-btn-container'] {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 300;
+
+    a {
+      width: 150px;
+      margin: 1.25rem auto 0;
+    }
+  }
+
+  div[class='text'] {
+    padding: 0.25rem 2rem;
+    text-align: center;
+
+    h1 {
+      width: 350px;
+    }
+
+    h2 {
+      color: $primaryColor;
+      font-size: 1.25rem;
+    }
+  }
+}
