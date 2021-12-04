@@ -10,58 +10,6 @@
   }
 }
 
-.header {
-  @include flexbox-default;
-  background: $primaryColor;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  color: $navy;
-  justify-content: center;
-  padding: 0 1rem;
-  z-index: 100;
-
-  svg {
-    width: 160px;
-  }
-
-  a {
-    @include flexbox-default;
-
-    &:focus,
-    &:hover {
-      svg {
-        animation: shake 0.25s;
-      }
-    }
-  }
-
-  nav {
-    display: grid;
-    gap: 0.25rem;
-    grid-template-columns: repeat(3, auto);
-    height: 100%;
-
-    a {
-      @include flexbox-default;
-      color: $navy;
-      font-weight: bold;
-      padding: 0 1rem;
-
-      &:focus,
-      &:hover {
-        background: $navy;
-        color: $white;
-      }
-    }
-  }
-}
-
-.container {
-  @include content-wrapper;
-  @include flexbox-default;
-  justify-content: space-between;
-  height: 100%;
-}
-
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);

@@ -9,7 +9,6 @@ export default function AboutPage() {
       description='Quebec3は日本脱出を目指す日本人のためのブログです'
     >
       <h1>Quebec3について</h1>
-      <BackToHome />
       <BackToHome destination='/' text='ホームへ戻る' />
     </Layout>
   )
