@@ -20,7 +20,7 @@ export default function Profile() {
           <h2>Kyoshin</h2>
           <p>
             2010年よりモントリオール在住のカナダ市民権保持者。
-            元陸自で現在Web屋。 カレー好き。
+            元陸上自衛官のWeb屋さん。 カレー好き。
           </p>
         </div>
       </div>

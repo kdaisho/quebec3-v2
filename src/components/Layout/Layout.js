@@ -27,7 +27,7 @@ export default function Layout({
       <Head title={title} description={description} image={image} path={path} />
       <div className={rootWrapper}>
         <header className={header}>
-          <div className={`page-wrapper ${container}`}>
+          <div className={container}>
             <Link
               to='/'
               onMouseEnter={() => setLogoColor(LOGO.HOVERED)}

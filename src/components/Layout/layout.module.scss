@@ -15,7 +15,7 @@
   background: $primaryColor;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: $navy;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 1rem;
   z-index: 100;
 
@@ -56,6 +56,7 @@
 }
 
 .container {
+  @include content-wrapper;
   @include flexbox-default;
   justify-content: space-between;
   height: 100%;

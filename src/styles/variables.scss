@@ -39,3 +39,8 @@ $hoverOpacity: 0.6;
     color: $yellow;
   }
 }
+
+@mixin content-wrapper {
+  max-width: $pageMaxWidth;
+  width: 100%;
+}

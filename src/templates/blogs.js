@@ -2,12 +2,13 @@ import Layout from 'src/components/Layout'
 import Pagination from 'src/components/Pagination'
 import PostList from 'src/components/PostList'
 import React from 'react'
+import { blogs } from 'src/styles/blogs.module.scss'
 import { graphql } from 'gatsby'
 
 const BlogList = ({ data, pageContext }) => {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
-      <div className='page-wrapper'>
+      <div className={blogs}>
         <h1>投稿記事一覧</h1>
         <PostList posts={data.allMdx.nodes} />
         <Pagination
