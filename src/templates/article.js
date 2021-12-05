@@ -3,16 +3,14 @@ import {
   article,
   featuredImage,
   footerNav,
-  header,
-  keywords,
   main,
-} from 'src/components/PostLayout/postLayout.module.scss'
+} from 'src/styles/article.module.scss'
 import ArticleFooterNav from 'src/components/ArticleFooterNav'
+import ArticleHeader from 'src/components/ArticleHeader'
 import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import { Tags } from 'src/components/PostLayout/utils'
 import { graphql } from 'gatsby'
 
 export const pageQuery = graphql`
@@ -63,11 +61,7 @@ const Article = ({ data, pageContext }) => {
         </div>
       )}
       <main className={main}>
-        <div className={header}>
-          <h1>{title}</h1>
-          <time dateTime={date}>{date}</time>
-          {tags && <Tags tags={tags} cname={keywords} />}
-        </div>
+        <ArticleHeader date={date} title={title} tags={tags} />
         <article className={article}>
           <MDXRenderer>{node.body}</MDXRenderer>
         </article>

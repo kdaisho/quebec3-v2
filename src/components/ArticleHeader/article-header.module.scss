@@ -1,0 +1,30 @@
+@use 'src/styles/variables' as *;
+
+.header {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-rows: auto;
+
+  h1 {
+    font-size: $largest;
+    line-height: $h1LineHeight;
+  }
+}
+
+.keywords {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 0.5rem;
+
+  li {
+    @include flexbox-default;
+    background: $primaryColor;
+    background: $yellow;
+    border-radius: $borderRadius;
+    color: $navy;
+    font-size: $small;
+    margin: 0 0.75rem 0.75rem 0;
+    padding: 0 0.75rem;
+  }
+}
