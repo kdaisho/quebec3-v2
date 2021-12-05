@@ -1,8 +1,4 @@
 @use 'src/styles/variables' as *;
-@mixin img-style {
-  max-width: $articleMaxWidth;
-  width: 100%;
-}
 
 .main {
   display: grid;
@@ -10,10 +6,6 @@
   margin: 4rem auto;
   max-width: 680px;
   width: 100%;
-}
-
-.heroImage {
-  @include img-style;
 }
 
 .header {
@@ -41,10 +33,6 @@
 }
 
 .article {
-  img {
-    @include img-style;
-  }
-
   h2 {
     padding: 2rem 0 0.25rem;
   }

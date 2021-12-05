@@ -6,9 +6,20 @@ export const BlogList = graphql`
     slug
     frontmatter {
       date(formatString: "YYYY年M月DD日")
-      thumb
       title
       description
+      thumb {
+        childImageSharp {
+          fluid {
+            src
+          }
+          gatsbyImageData(
+            width: 120
+            height: 120
+            transformOptions: { cropFocus: CENTER }
+          )
+        }
+      }
     }
   }
 `

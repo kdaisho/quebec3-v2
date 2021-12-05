@@ -47,9 +47,7 @@ async function makeArticleFromMdx({ graphql, actions }) {
             frontmatter {
               date(formatString: "YYYY年DD月MM日")
               description
-              hero
               tags
-              thumb
               title
             }
           }
@@ -70,10 +68,26 @@ async function makeArticleFromMdx({ graphql, actions }) {
       component: path.resolve('./src/templates/article.js'),
       context: {
         slug: post.node.slug,
-        previous: posts[i - 1],
-        next: posts[i + 1],
+        prev: posts[i - 1]?.node.slug,
+        next: posts[i + 1]?.node.slug,
         currentPage: i + 1,
       },
     })
   })
+}
+
+// For MDX users: This is required to make childImageSharp available in GraphQL
+// source: https://github.com/gatsbyjs/gatsby/issues/18271#issuecomment-547097964
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: MdxFrontmatter!
+    }
+    type MdxFrontmatter {
+      hero: File @fileByRelativePath
+      thumb: File @fileByRelativePath
+    }
+  `)
 }

@@ -2,8 +2,8 @@
 date: 2015-05-03
 title: ブログ村ランキングでRSSが認識されない場合の対処法
 description: 最近、ブログを書くことが週の日課（週課？）となりつつあるKyoshinであるが、より多くの読者獲得のため、「ブログ村ランキング」なるものに参加することにした。
-thumb: https://res.cloudinary.com/de9x7yfyb/image/upload/c_fill,f_auto,h_120,q_auto,r_6,w_120/v1637734551/qc3/posts/rssfeed/rss-broken_y2hm4z.jpg
-hero: https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734551/qc3/posts/rssfeed/rss-broken_y2hm4z.jpg
+thumb: ../../images/posts/rssfeed/rss-broken.jpg
+hero: ../../images/posts/rssfeed/rss-broken.jpg
 tags: ['プログラミング', '英語']
 ---
 
@@ -122,7 +122,7 @@ html が書ける人なら読めばわかると思うが、タグの内が一つ
 ところで、自分の書いた xml がちゃんと正しいのか不安になるであろう。
 validation はここ W3C Feed Validation Service でできる。W3C なんで信頼性は折り紙付きだ。
 
-![w3cのバリデーション画面](https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734551/qc3/posts/rssfeed/validation_gezwj1.jpg)xxxxx.com の部分には自分のウェブサイトのドメインを入れるように。
+![w3cのバリデーション画面](../../images/posts/rssfeed/validation.jpg)xxxxx.com の部分には自分のウェブサイトのドメインを入れるように。
 
 ここに自分の RSS の URL を入れて Check をクリックしよう。
 注意しなきゃならないのは、自分のウェブサイト内にあるの xml ファイルの URL ってことだ。きちんと rss.xml まで書くこと。
@@ -137,21 +137,21 @@ validation はここ W3C Feed Validation Service でできる。W3C なんで信
 
 ブログ村の「登録内容確認・変更」のページに行って以下の部分
 
-![RSS入力画面](https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734551/qc3/posts/rssfeed/rss-insert_n9pa8x.jpg)赤枠で囲ったところに書き込む。RSS に慣れてるかどうかなんてもはや関係ない。
+![RSS入力画面](../../images/posts/rssfeed/rss-insert.jpg)赤枠で囲ったところに書き込む。RSS に慣れてるかどうかなんてもはや関係ない。
 
 ブログ RSS（省略可）の欄に上記のように書き込むこと。赤字の部分を自分のウェブサイトのドメインにするのを忘れずに。
 書いたら変更を保存。
 
 その後「記事反映（Ping 送信・Ping 代理送信）」ページへ行き、以下の写真で示す「Ping 代理送信方法 1」の「Ping 代理送信」を一度クリックすれば完了だ。
 
-![ping代理入力画面](https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734551/qc3/posts/rssfeed/ping-send_zqlg7z.jpg)このページ、探すのが結構面倒だったんでリンクをここに貼っておくよ。
+![ping代理入力画面](../../images/posts/rssfeed/ping-send.jpg)このページ、探すのが結構面倒だったんでリンクをここに貼っておくよ。
 
 [Ping 送信ページ](/blog//mypage.blogmura.com/send_ping 'Ping送信ページ')
 
 あとは野となれ山となれ、結果はすぐに反映されないのでコーヒーでも煎れて待とう。
 僕の場合 1 時間程度で反映が確認できた。
 
-![ブログ村の画面](https://res.cloudinary.com/de9x7yfyb/image/upload/f_auto,q_auto,r_6,w_680/v1637734551/qc3/posts/rssfeed/reflect-change_u4sozw.gif)しばらくして自分のプロフィールページを見てみると、とうとう記事一覧が表示された。
+![ブログ村の画面](../../images/posts/rssfeed/reflect-change.gif)しばらくして自分のプロフィールページを見てみると、とうとう記事一覧が表示された。
 
 ようやくランキングに最新記事のリストが表示された。僕はこれが見たかったんだ。やれやれ。
 

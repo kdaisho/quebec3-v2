@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Untitled 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="default-thumb.opt" fill-rule="nonzero">
+            <rect id="bg" fill="#bdddff" x="0" y="0" width="120" height="120"></rect>
+            <g id="text" transform="translate(11.000000, 23.000000)" fill="#021f37">
+                <path d="M19.11,73.8 L0.753846154,55.5375 L0.753846154,19.0125 L19.11,0.75 L37.4661538,0.75 L55.8223077,19.0125 L55.8223077,55.5375 L52.1661538,59.2125 L65.0192308,73.8 L19.11,73.8 Z M18.8461538,18.75 L18.8461538,55.275 L37.2023077,55.275 L37.2023077,18.75 L18.8461538,18.75 Z" id="Combined-Shape"></path>
+                <polygon id="Shape-path" points="97.7738462 63.075 86.9938462 73.8 64.0769231 73.8 64.0769231 64.425 84.28 64.425 84.28 51.0375 64.0769231 51.0375 64.0769231 41.625 84.28 41.625 84.28 29.5875 64.0769231 29.5875 64.0769231 20.175 86.9938462 20.175 97.7738462 30.9"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

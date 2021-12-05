@@ -14,9 +14,20 @@ export default function IndexPage() {
           ...BlogListFragment
         }
       }
+      # mdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
+      #   frontmatter {
+      #     thumb {
+      #       childImageSharp {
+      #         gatsbyImageData(width: 120, placeholder: BLURRED)
+      #       }
+      #     }
+      #   }
+      # }
     }
   `)
   const posts = data?.allMdx?.nodes
+
+  console.log('===== posts', posts)
 
   return (
     <Layout>

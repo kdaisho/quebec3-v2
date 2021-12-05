@@ -1,10 +1,9 @@
-import { Hero, Tags } from 'src/components/PostLayout/utils'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
   article,
   featuredImage,
   footerNav,
   header,
-  heroImage,
   keywords,
   main,
 } from 'src/components/PostLayout/postLayout.module.scss'
@@ -13,6 +12,7 @@ import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
+import { Tags } from 'src/components/PostLayout/utils'
 import { graphql } from 'gatsby'
 
 export const pageQuery = graphql`
@@ -26,17 +26,18 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "YYYY年DD月MM日")
             description
-            hero
             tags
-            thumb
             title
           }
         }
-        next {
-          slug
-        }
-        previous {
-          slug
+      }
+    }
+    mdx(slug: { eq: $slug }) {
+      frontmatter {
+        hero {
+          childImageSharp {
+            gatsbyImageData(width: 680, placeholder: BLURRED)
+          }
         }
       }
     }
@@ -45,20 +46,20 @@ export const pageQuery = graphql`
 
 const Article = ({ data, pageContext }) => {
   const { node } = data.allMdx.edges[0]
-  const { body } = node
-  const { date, title, description, hero, tags } = node.frontmatter
-  const toPrev = pageContext.previous
-    ? `/${pageContext.previous.node.slug}`
-    : 'disabled'
-  const toNext = pageContext.next
-    ? `/${pageContext.next.node.slug}`
-    : 'disabled'
+  const { date, title, description, tags } = node.frontmatter
+  const toPrev = pageContext.prev ? `/${pageContext.prev}` : 'disabled'
+  const toNext = pageContext.next ? `/${pageContext.next}` : 'disabled'
+  const image = getImage(data.mdx.frontmatter.hero)
 
   return (
     <Layout title={title} description={description}>
-      {hero && (
+      {image && (
         <div className={featuredImage}>
-          <Hero cname={heroImage} hero={hero} title={title} />
+          <GatsbyImage
+            image={image}
+            alt={title}
+            style={{ overflow: 'visible' }}
+          />
         </div>
       )}
       <main className={main}>
@@ -67,13 +68,10 @@ const Article = ({ data, pageContext }) => {
           <time dateTime={date}>{date}</time>
           {tags && <Tags tags={tags} cname={keywords} />}
         </div>
-
         <article className={article}>
-          <MDXRenderer>{body}</MDXRenderer>
+          <MDXRenderer>{node.body}</MDXRenderer>
         </article>
-
         <ArticleFooterNav toPrev={toPrev} toNext={toNext} />
-
         <nav className={footerNav}>
           <BackToHome
             destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}

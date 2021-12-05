@@ -21,7 +21,7 @@ export default function Hero() {
           </Link>
         </div>
         <StaticImage
-          src='../images/quebec3-cat-opt.jpg'
+          src='../../images/quebec3-cat-opt.jpg'
           alt='black cat'
           aspectRatio={4 / 1}
           placeholder='blurred'
