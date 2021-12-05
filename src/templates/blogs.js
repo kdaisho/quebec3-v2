@@ -1,9 +1,9 @@
+import { blogs, main } from 'src/styles/blogs.module.scss'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import Pagination from 'src/components/Pagination'
 import PostList from 'src/components/PostList'
 import React from 'react'
-import { blogs } from 'src/styles/blogs.module.scss'
 import { graphql } from 'gatsby'
 
 export default function BlogList({ data, pageContext }) {
@@ -12,7 +12,9 @@ export default function BlogList({ data, pageContext }) {
       <Hero file={data.file} pageTitle='投稿記事一覧' altText='pancake' />
       <div className={blogs}>
         <h1>投稿記事一覧</h1>
-        <PostList posts={data.allMdx.nodes} />
+        <div className={main}>
+          <PostList posts={data.allMdx.nodes} />
+        </div>
         <Pagination
           totalCount={data.allMdx.totalCount}
           currentPage={pageContext.currentPage}
