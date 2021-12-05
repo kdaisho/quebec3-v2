@@ -15,7 +15,7 @@ export default function AboutPage() {
 }
 
 // TODO: bring image sharp object here to render hero image
-// export const pageQuery = graphql`
+// export const aboutPageHeroQuery = graphql`
 //   {
 //     file(relativePath: { eq: "quebec3-cat-opt.jpg" }) {
 //       childImageSharp {

@@ -13,34 +13,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import { graphql } from 'gatsby'
 
-export const pageQuery = graphql`
-  query ($slug: String!) {
-    allMdx(filter: { slug: { eq: $slug } }) {
-      edges {
-        node {
-          id
-          slug
-          body
-          frontmatter {
-            date(formatString: "YYYY年DD月MM日")
-            description
-            tags
-            title
-          }
-        }
-      }
-    }
-    mdx(slug: { eq: $slug }) {
-      frontmatter {
-        hero {
-          childImageSharp {
-            gatsbyImageData(width: 680, placeholder: BLURRED)
-          }
-        }
-      }
-    }
-  }
-`
 export default function Article({ data, pageContext }) {
   const { node } = data.allMdx.edges[0]
   const { date, title, description, tags } = node.frontmatter
@@ -75,3 +47,32 @@ export default function Article({ data, pageContext }) {
     </Layout>
   )
 }
+
+export const articleQuery = graphql`
+  query ($slug: String!) {
+    allMdx(filter: { slug: { eq: $slug } }) {
+      edges {
+        node {
+          id
+          slug
+          body
+          frontmatter {
+            date(formatString: "YYYY年DD月MM日")
+            description
+            tags
+            title
+          }
+        }
+      }
+    }
+    mdx(slug: { eq: $slug }) {
+      frontmatter {
+        hero {
+          childImageSharp {
+            gatsbyImageData(width: 680, placeholder: BLURRED)
+          }
+        }
+      }
+    }
+  }
+`

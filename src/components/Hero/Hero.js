@@ -3,17 +3,7 @@ import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
 import React from 'react'
 import { SIZE } from 'src/components/constants'
-import { graphql } from 'gatsby'
 import { heroContainer } from './hero.module.scss'
-
-export const pageQuery = graphql`
-  {
-    file(relativePath: { eq: "profile-opt.jpg" }) {
-      id
-      name
-    }
-  }
-`
 
 export default function Hero({
   file,
@@ -22,7 +12,6 @@ export default function Hero({
   altText = 'quebec3',
 }) {
   const image = getImage(file)
-
   return (
     <section style={{ position: 'relative', margin: '0 auto' }}>
       <div className={heroContainer}>
