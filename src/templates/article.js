@@ -41,8 +41,7 @@ export const pageQuery = graphql`
     }
   }
 `
-
-const Article = ({ data, pageContext }) => {
+export default function Article({ data, pageContext }) {
   const { node } = data.allMdx.edges[0]
   const { date, title, description, tags } = node.frontmatter
   const toPrev = pageContext.prev ? `/${pageContext.prev}` : 'disabled'
@@ -76,5 +75,3 @@ const Article = ({ data, pageContext }) => {
     </Layout>
   )
 }
-
-export default Article

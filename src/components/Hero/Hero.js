@@ -1,36 +1,53 @@
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
 import React from 'react'
 import { SIZE } from 'src/components/constants'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql } from 'gatsby'
 import { heroContainer } from './hero.module.scss'
 
-export default function Hero() {
+export const pageQuery = graphql`
+  {
+    file(relativePath: { eq: "profile-opt.jpg" }) {
+      id
+      name
+    }
+  }
+`
+
+export default function Hero({
+  file,
+  isHomepage = false,
+  pageTitle = 'Quebec3',
+  altText = 'quebec3',
+}) {
+  const image = getImage(file)
+
   return (
-    <section style={{ position: 'relative' }}>
+    <section style={{ position: 'relative', margin: '0 auto' }}>
       <div className={heroContainer}>
         <div className='title-btn-container'>
           <div className='text'>
             <h1>
               <Logo outline={'#ffca28'} inner={'#000'} title='Quebec3' />
             </h1>
-            <h2>- 海外移住ポータル -</h2>
+            <h2>{pageTitle}</h2>
           </div>
-          <Link className='button-like' to='/blogs/1'>
-            記事一覧
-          </Link>
+          {isHomepage && (
+            <Link className='button-like' to='/blogs/1'>
+              記事一覧
+            </Link>
+          )}
         </div>
-        <StaticImage
-          src='../../images/quebec3-cat-opt.jpg'
-          alt='black cat'
-          aspectRatio={4 / 1}
+        <GatsbyImage
+          image={image}
+          alt={altText}
           placeholder='blurred'
+          layout='fullWidth'
           style={{
             minHeight: SIZE.HERO.MIN_HEIGHT,
             maxHeight: SIZE.HERO.MAX_HEIGHT,
           }}
-          layout='fullWidth'
-          transformOptions={{ cropFocus: 'center' }}
         />
       </div>
     </section>

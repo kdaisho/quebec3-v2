@@ -14,24 +14,26 @@ export default function IndexPage() {
           ...BlogListFragment
         }
       }
-      # mdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
-      #   frontmatter {
-      #     thumb {
-      #       childImageSharp {
-      #         gatsbyImageData(width: 120, placeholder: BLURRED)
-      #       }
-      #     }
-      #   }
-      # }
+      file(relativePath: { eq: "quebec3-cat-opt.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            transformOptions: { cropFocus: CENTER }
+            placeholder: BLURRED
+          )
+        }
+      }
     }
   `)
   const posts = data?.allMdx?.nodes
 
-  console.log('===== posts', posts)
-
   return (
     <Layout>
-      <Hero />
+      <Hero
+        file={data.file}
+        isHomepage={true}
+        pageTitle='- 海外移住ポータル -'
+        altText='black cat'
+      />
       <div className={homepage}>
         <p className={intro}>
           Quebec3は、モントリオール島在住の日本人により2015年から運営されている気ままな個人のブログです。カナダでの生活ぶりを勝手な視点から書いています。

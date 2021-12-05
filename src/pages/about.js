@@ -13,3 +13,17 @@ export default function AboutPage() {
     </Layout>
   )
 }
+
+// TODO: bring image sharp object here to render hero image
+// export const pageQuery = graphql`
+//   {
+//     file(relativePath: { eq: "quebec3-cat-opt.jpg" }) {
+//       childImageSharp {
+//         gatsbyImageData(
+//           transformOptions: { cropFocus: CENTER }
+//           placeholder: BLURRED
+//         )
+//       }
+//     }
+//   }
+// `

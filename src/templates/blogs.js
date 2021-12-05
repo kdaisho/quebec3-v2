@@ -6,11 +6,10 @@ import React from 'react'
 import { blogs } from 'src/styles/blogs.module.scss'
 import { graphql } from 'gatsby'
 
-const BlogList = ({ data, pageContext }) => {
+export default function BlogList({ data, pageContext }) {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
-      {/* TODO: replace Hero with an image for this page */}
-      <Hero />
+      <Hero file={data.file} pageTitle='投稿記事一覧' altText='pancake' />
       <div className={blogs}>
         <h1>投稿記事一覧</h1>
         <PostList posts={data.allMdx.nodes} />
@@ -22,8 +21,6 @@ const BlogList = ({ data, pageContext }) => {
     </Layout>
   )
 }
-
-export default BlogList
 
 export const query = graphql`
   query ($limit: Int!, $skip: Int!) {
@@ -38,6 +35,14 @@ export const query = graphql`
       totalCount
       pageInfo {
         currentPage
+      }
+    }
+    file(relativePath: { eq: "quebec3-pancake-opt.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          transformOptions: { cropFocus: CENTER }
+          placeholder: BLURRED
+        )
       }
     }
   }
