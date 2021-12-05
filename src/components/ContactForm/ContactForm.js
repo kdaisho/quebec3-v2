@@ -23,10 +23,8 @@ export default function ContactForm() {
           message,
         }),
       })
-      console.log('Success sending form', response.json())
       // TODO: Set a toast message
     } catch (err) {
-      console.error('Error sending form', err)
       // TODO: Set a toast message
     }
   }
