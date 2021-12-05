@@ -6,7 +6,7 @@ import {
   middle,
   postInfo,
   postTitle,
-} from 'src/components/PostList/postList.module.scss'
+} from 'src/components/PostList/post-list.module.scss'
 import { Link } from 'gatsby'
 import { PATH_DEFAULT_THUMB } from 'src/components/constants'
 import React from 'react'

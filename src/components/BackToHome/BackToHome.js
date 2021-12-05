@@ -2,7 +2,7 @@ import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
 import ArrowLeft from 'src/svg/ArrowLeft'
 import { Link } from 'gatsby'
-import { backTo } from './backToHome.module.scss'
+import { backTo } from './back-to-home.module.scss'
 
 export default function BackToHome({ destination, text }) {
   const [color, setColor] = useState(PRIMARY)

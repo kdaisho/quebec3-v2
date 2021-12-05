@@ -1,6 +1,6 @@
 import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
-import { isRight, link, nav } from './articleFooterNav.module.scss'
+import { isRight, link, nav } from './article-footer-nav.module.scss'
 import ArrowLeft from 'src/svg/ArrowLeft'
 import { Link } from 'gatsby'
 
