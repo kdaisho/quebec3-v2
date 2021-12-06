@@ -2,7 +2,7 @@
 
 .root-wrapper {
   display: grid;
-  grid-template-rows: $headerHeight auto;
+  grid-template-rows: $headerHeight auto repeat(1, 1fr);
   height: 100vh;
 
   footer {
