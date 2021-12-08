@@ -13,32 +13,30 @@ export default function Hero({
 }) {
   const image = getImage(file)
   return (
-    <section style={{ position: 'relative', margin: '0 auto' }}>
-      <div className={heroContainer}>
-        <div className='title-btn-container'>
-          <div className='text'>
-            <h1>
-              <Logo outline={'#ffca28'} inner={'#000'} title='Quebec3' />
-            </h1>
-            <h2>{pageTitle}</h2>
-          </div>
-          {isHomepage && (
-            <Link className='button-like' to='/blogs/1'>
-              記事一覧
-            </Link>
-          )}
+    <div className={heroContainer}>
+      <div className='title-btn-container'>
+        <div className='text'>
+          <h1>
+            <Logo outline={'#ffca28'} inner={'#000'} title='Quebec3' />
+          </h1>
+          <h2>{pageTitle}</h2>
         </div>
-        <GatsbyImage
-          image={image}
-          alt={altText}
-          placeholder='blurred'
-          layout='fullWidth'
-          style={{
-            minHeight: SIZE.HERO.MIN_HEIGHT,
-            maxHeight: SIZE.HERO.MAX_HEIGHT,
-          }}
-        />
+        {isHomepage && (
+          <Link className='button-like' to='/blogs/1'>
+            記事一覧
+          </Link>
+        )}
       </div>
-    </section>
+      <GatsbyImage
+        image={image}
+        alt={altText}
+        placeholder='blurred'
+        layout='fullWidth'
+        style={{
+          minHeight: SIZE.HERO.MIN_HEIGHT,
+          maxHeight: SIZE.HERO.MAX_HEIGHT,
+        }}
+      />
+    </div>
   )
 }

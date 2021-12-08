@@ -25,13 +25,37 @@
   }
 
   nav {
+    background: $yellow;
+    box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: grid;
-    gap: 0.25rem;
-    grid-template-columns: repeat(3, auto);
-    height: 100%;
+    height: 240px;
+    left: 0;
+    position: absolute;
+    top: $headerHeight;
+    transform: translateX(100%);
+    width: 100%;
+    z-index: 1;
+    transition: 0.3s transform 0s cubic-bezier(0.75, -0.5, 0, 1.75);
+
+    &[class='expanded'] {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 768px) {
+      box-shadow: none;
+      gap: 0.25rem;
+      grid-template-columns: repeat(3, auto);
+      height: 100%;
+      position: initial;
+      transform: none;
+      width: auto;
+    }
 
     a {
-      @include flexbox-default;
+      border-bottom: 2px solid $navy;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
       color: $navy;
       font-weight: bold;
       padding: 0 1rem;
@@ -40,6 +64,10 @@
       &:hover {
         background: $navy;
         color: $white;
+      }
+
+      @media (min-width: 768px) {
+        border: none;
       }
     }
   }
@@ -50,4 +78,84 @@
   @include flexbox-default;
   justify-content: space-between;
   height: 100%;
+}
+
+.menuButton {
+  border: none;
+  height: 60px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+  padding: 15px 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+
+  [class='hamburger-box'] {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+
+  [class='hamburger-inner'],
+  [class='hamburger-inner']:after,
+  [class='hamburger-inner']:before {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background: $navy;
+  }
+
+  [class='hamburger-inner'] {
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+
+    &:before,
+    &:after {
+      display: block;
+      content: '';
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      bottom: -10px;
+    }
+  }
+
+  &[class^='is-active'] {
+    [class='hamburger-inner']:before {
+      top: 0;
+      transition: top 0.1s ease,
+        transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+      transform: translate3d(8px, -10px, 0) rotate(45deg) scaleX(0.7);
+    }
+    [class='hamburger-inner']:after {
+      bottom: 0;
+      transition: bottom 0.1s ease,
+        transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+      transform: translate3d(8px, 10px, 0) rotate(-45deg) scaleX(0.7);
+    }
+  }
 }
