@@ -3,17 +3,35 @@
 .list-item {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: 120px auto 140px;
+  grid-template-areas:
+    'thumb text'
+    'cta cta';
+
+  @media (min-width: $mobile) {
+    grid-template-columns: 120px auto 140px;
+    grid-template-areas: 'thumb text cta';
+  }
+}
+
+.thumb {
+  grid-area: thumb;
 
   img {
+    width: 60px;
+
     &:hover {
       opacity: $hoverOpacity;
+    }
+
+    @media (min-width: $mobile) {
+      width: 120px;
     }
   }
 }
 
 .post-title {
   font-size: $large;
+  font-size: 1.25rem;
   font-weight: bold;
   white-space: normal;
 }
@@ -25,12 +43,14 @@
 }
 
 .post-info {
+  grid-area: text;
   overflow: hidden;
 }
 
 .middle {
   display: flex;
   flex-flow: column nowrap;
+  grid-area: cta;
   justify-content: center;
 }
 

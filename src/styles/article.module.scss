@@ -1,6 +1,6 @@
 @use 'src/styles/variables' as *;
 
-.main {
+.article {
   display: grid;
   gap: 2.75rem;
   margin: 4rem auto;
@@ -21,7 +21,7 @@
   }
 }
 
-.article {
+.article-body {
   h2 {
     padding: 2rem 0 0.25rem;
   }

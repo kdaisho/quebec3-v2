@@ -6,7 +6,8 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: $navy;
   justify-content: center;
-  padding: 0 1rem;
+  padding: $contentPadding;
+  position: relative;
   z-index: 100;
 
   svg {
@@ -41,7 +42,7 @@
       transform: translateX(0);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $mobile) {
       box-shadow: none;
       gap: 0.25rem;
       grid-template-columns: repeat(3, auto);
@@ -66,7 +67,7 @@
         color: $white;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: $mobile) {
         border: none;
       }
     }
@@ -80,11 +81,12 @@
   height: 100%;
 }
 
-.menuButton {
+.menu-button {
   border: none;
   height: 60px;
+  padding: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $mobile) {
     display: none;
   }
 }

@@ -6,6 +6,7 @@ import {
   middle,
   postInfo,
   postTitle,
+  thumb,
 } from 'src/components/PostList/post-list.module.scss'
 import { Link } from 'gatsby'
 import { PATH_DEFAULT_THUMB } from 'src/components/constants'
@@ -19,7 +20,7 @@ export default function PostList({ posts }) {
 
         return (
           <li key={post.id} className={listItem}>
-            <Link className={postTitle} to={`/${post.slug}`}>
+            <Link to={`/${post.slug}`} className={thumb}>
               {image ? (
                 <GatsbyImage image={image} alt={post.frontmatter.title} />
               ) : (

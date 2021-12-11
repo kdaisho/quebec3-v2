@@ -6,8 +6,12 @@
   grid-template-rows: auto;
 
   h1 {
-    font-size: $largest;
+    font-size: $larger;
     line-height: $h1LineHeight;
+
+    @media (min-width: $mobile) {
+      font-size: $super;
+    }
   }
 }
 

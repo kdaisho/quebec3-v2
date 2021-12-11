@@ -27,6 +27,14 @@
 
     h1 {
       width: 350px;
+
+      svg {
+        width: 280px;
+
+        @media (min-width: $mobile) {
+          width: auto;
+        }
+      }
     }
 
     h2 {

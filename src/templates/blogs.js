@@ -1,6 +1,7 @@
 import { blogs, main } from 'src/styles/blogs.module.scss'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
+import MainContentWrapper from 'src/components/mainContentWrapper'
 import Pagination from 'src/components/Pagination'
 import PostList from 'src/components/PostList'
 import React from 'react'
@@ -10,16 +11,18 @@ export default function BlogList({ data, pageContext }) {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
       <Hero file={data.file} pageTitle='投稿記事一覧' altText='pancake' />
-      <div className={blogs}>
-        <h1>投稿記事一覧</h1>
-        <div className={main}>
-          <PostList posts={data.allMdx.nodes} />
+      <MainContentWrapper>
+        <div className={blogs}>
+          <h1>投稿記事一覧</h1>
+          <div className={main}>
+            <PostList posts={data.allMdx.nodes} />
+          </div>
+          <Pagination
+            totalCount={data.allMdx.totalCount}
+            currentPage={pageContext.currentPage}
+          />
         </div>
-        <Pagination
-          totalCount={data.allMdx.totalCount}
-          currentPage={pageContext.currentPage}
-        />
-      </div>
+      </MainContentWrapper>
     </Layout>
   )
 }

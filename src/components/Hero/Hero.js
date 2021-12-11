@@ -1,8 +1,8 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { NAVY, SIZE, YELLOW } from 'src/components/constants'
 import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
 import React from 'react'
-import { SIZE } from 'src/components/constants'
 import { heroContainer } from './hero.module.scss'
 
 export default function Hero({
@@ -17,7 +17,7 @@ export default function Hero({
       <div className='title-btn-container'>
         <div className='text'>
           <h1>
-            <Logo outline={'#ffca28'} inner={'#000'} title='Quebec3' />
+            <Logo outline={YELLOW} inner={NAVY} title='Quebec3' />
           </h1>
           <h2>{pageTitle}</h2>
         </div>

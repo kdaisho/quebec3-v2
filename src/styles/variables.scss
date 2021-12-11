@@ -1,10 +1,12 @@
 // font
 $baseFontSize: 18px;
-$largest: 2rem;
-$large: 1.5rem;
+$super: 6rem;
+$larger: 2rem;
+$large: 1.25rem;
 $small: 16px;
 $lineHeight: 2;
-$h1LineHeight: 1.4;
+$h1LineHeight: 1.2;
+$contentPadding: 0 1.25rem;
 
 // color
 // $primaryColor: #bdddff;
@@ -15,7 +17,8 @@ $white: #d6deeb;
 $yellow: #ffca28;
 
 // breakpoint
-$largerThanTablet: 601px;
+$mobile: 768px;
+$tablet: 1024px;
 
 // others
 $borderWidth: 2px;

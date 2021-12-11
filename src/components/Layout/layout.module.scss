@@ -4,6 +4,7 @@
   display: grid;
   grid-template-rows: $headerHeight auto repeat(1, 1fr);
   height: 100vh;
+  overflow-x: hidden;
 
   footer {
     margin-top: auto;
