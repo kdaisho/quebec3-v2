@@ -9,11 +9,9 @@ $h1LineHeight: 1.2;
 $contentPadding: 0 1.25rem;
 
 // color
-// $primaryColor: #bdddff;
-$primaryColor: #ffca28;
-$secondaryColor: #59acf6;
-$navy: #021f37;
-$white: #d6deeb;
+$primaryColor: #bdddff;
+$navy: #111421;
+$white: #d6defe;
 $yellow: #ffca28;
 
 // breakpoint
@@ -21,7 +19,6 @@ $mobile: 768px;
 $tablet: 1024px;
 
 // others
-$borderWidth: 2px;
 $borderRadius: 4px;
 $shadowSize: 12px;
 $articleMaxWidth: 680px;
@@ -29,6 +26,7 @@ $pageMaxWidth: 1380px;
 $headerHeight: 70px;
 $cardWidth: 240px;
 $hoverOpacity: 0.6;
+$boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 @mixin flexbox-default {
   align-items: center;

@@ -1,7 +1,7 @@
-import { PRIMARY } from 'src/components/constants'
 import React from 'react'
+import { WHITE } from 'src/components/constants'
 
-const ArrowLeft = ({ color = PRIMARY }) => (
+const ArrowLeft = ({ color = WHITE }) => (
   <svg
     enableBackground='new 0 0 96 96'
     height='32px'

@@ -1,12 +1,12 @@
-import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
+import { WHITE, YELLOW } from 'src/components/constants'
 import { isRight, link, nav } from './article-footer-nav.module.scss'
 import ArrowLeft from 'src/svg/ArrowLeft'
 import { Link } from 'gatsby'
 
 export default function ArticleFooterNav({ toPrev, toNext }) {
-  const [colorLeft, setColorLeft] = useState(PRIMARY)
-  const [colorRight, setColorRight] = useState(PRIMARY)
+  const [colorLeft, setColorLeft] = useState(WHITE)
+  const [colorRight, setColorRight] = useState(WHITE)
 
   return (
     <nav className={nav}>
@@ -15,7 +15,7 @@ export default function ArticleFooterNav({ toPrev, toNext }) {
         disabled={toPrev === 'disabled' ? true : false}
         to={toPrev}
         onMouseEnter={() => setColorLeft(YELLOW)}
-        onMouseLeave={() => setColorLeft(PRIMARY)}
+        onMouseLeave={() => setColorLeft(WHITE)}
       >
         <ArrowLeft color={colorLeft} /> 前の記事
       </Link>
@@ -24,7 +24,7 @@ export default function ArticleFooterNav({ toPrev, toNext }) {
         disabled={toNext === 'disabled' ? true : false}
         to={toNext}
         onMouseEnter={() => setColorRight(YELLOW)}
-        onMouseLeave={() => setColorRight(PRIMARY)}
+        onMouseLeave={() => setColorRight(WHITE)}
       >
         次の記事 <ArrowLeft color={colorRight} />
       </Link>

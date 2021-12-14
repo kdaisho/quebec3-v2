@@ -1,5 +1,11 @@
 @use 'src/styles/variables' as *;
 
+.latest-posts {
+  display: grid;
+  gap: 3rem;
+  list-style: none;
+}
+
 .list-item {
   display: grid;
   gap: 1.25rem;
@@ -52,10 +58,4 @@
   flex-flow: column nowrap;
   grid-area: cta;
   justify-content: center;
-}
-
-.latest-posts {
-  display: grid;
-  gap: 1.5rem;
-  list-style: none;
 }

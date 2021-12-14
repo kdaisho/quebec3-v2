@@ -1,7 +1,7 @@
 @use 'src/styles/variables' as *;
 @mixin button-style {
   background: $primaryColor;
-  border: $borderWidth solid $primaryColor;
+  border: 1px solid $primaryColor;
   border-radius: $borderRadius;
   color: $navy;
   font-size: $baseFontSize;

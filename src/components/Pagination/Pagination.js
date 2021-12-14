@@ -1,13 +1,13 @@
-import { PRIMARY, YELLOW } from 'src/components/constants'
 import React, { useState } from 'react'
+import { WHITE, YELLOW } from 'src/components/constants'
 import { isRight, link, pagination } from './pagination.module.scss'
 import ArrowLeft from 'src/svg/ArrowLeft'
 import { ITEMS_PER_PAGE } from 'src/components/constants'
 import { Link } from 'gatsby'
 
 export default function Pagination({ totalCount, currentPage }) {
-  const [colorLeft, setColorLeft] = useState(PRIMARY)
-  const [colorRight, setColorRight] = useState(PRIMARY)
+  const [colorLeft, setColorLeft] = useState(WHITE)
+  const [colorRight, setColorRight] = useState(WHITE)
 
   const pageCount = Math.ceil(totalCount / ITEMS_PER_PAGE)
   const prev = currentPage - 1
@@ -20,7 +20,7 @@ export default function Pagination({ totalCount, currentPage }) {
         disabled={prev <= 0 ? true : false}
         to={`/blogs/${prev}`}
         onMouseEnter={() => setColorLeft(YELLOW)}
-        onMouseLeave={() => setColorLeft(PRIMARY)}
+        onMouseLeave={() => setColorLeft(WHITE)}
       >
         <ArrowLeft color={colorLeft} /> 前へ
       </Link>
@@ -32,7 +32,7 @@ export default function Pagination({ totalCount, currentPage }) {
         disabled={next >= pageCount + 1 ? true : false}
         to={`/blogs/${next}`}
         onMouseEnter={() => setColorRight(YELLOW)}
-        onMouseLeave={() => setColorRight(PRIMARY)}
+        onMouseLeave={() => setColorRight(WHITE)}
       >
         次へ <ArrowLeft color={colorRight} />
       </Link>
