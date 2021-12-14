@@ -22,12 +22,15 @@
 .thumb {
   grid-area: thumb;
 
-  img {
-    width: 60px;
-
+  img,
+  picture {
     &:hover {
       opacity: $hoverOpacity;
     }
+  }
+
+  img {
+    width: 60px;
 
     @media (min-width: $mobile) {
       width: 120px;
