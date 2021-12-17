@@ -3,7 +3,7 @@ import { about, main, questions } from 'src/styles/about.module.scss'
 import BackToHome from 'src/components/BackToHome'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
-import MainContentWrapper from 'src/components/mainContentWrapper'
+import MainContentWrapper from 'src/components/MainContentWrapper'
 import React from 'react'
 
 export default function AboutPage({ data }) {

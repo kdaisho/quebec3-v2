@@ -10,7 +10,7 @@ import ArticleHeader from 'src/components/ArticleHeader'
 import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import MainContentWrapper from 'src/components/mainContentWrapper'
+import MainContentWrapper from 'src/components/MainContentWrapper'
 import React from 'react'
 import { graphql } from 'gatsby'
 

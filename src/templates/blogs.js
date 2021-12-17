@@ -1,7 +1,7 @@
 import { blogs, main } from 'src/styles/blogs.module.scss'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
-import MainContentWrapper from 'src/components/mainContentWrapper'
+import MainContentWrapper from 'src/components/MainContentWrapper'
 import Pagination from 'src/components/Pagination'
 import PostList from 'src/components/PostList'
 import React from 'react'
