@@ -22,7 +22,7 @@ export default function Pagination({ totalCount, currentPage }) {
         onMouseEnter={() => setColorLeft(YELLOW)}
         onMouseLeave={() => setColorLeft(WHITE)}
       >
-        <ArrowLeft color={colorLeft} /> 前へ
+        <ArrowLeft color={colorLeft} /> 次へ
       </Link>
       <span>
         ページ {currentPage} / {pageCount}
@@ -34,7 +34,7 @@ export default function Pagination({ totalCount, currentPage }) {
         onMouseEnter={() => setColorRight(YELLOW)}
         onMouseLeave={() => setColorRight(WHITE)}
       >
-        次へ <ArrowLeft color={colorRight} />
+        前へ <ArrowLeft color={colorRight} />
       </Link>
     </nav>
   )

@@ -17,7 +17,7 @@ export default function ArticleFooterNav({ toPrev, toNext }) {
         onMouseEnter={() => setColorLeft(YELLOW)}
         onMouseLeave={() => setColorLeft(WHITE)}
       >
-        <ArrowLeft color={colorLeft} /> 前の記事
+        <ArrowLeft color={colorLeft} /> 次の記事
       </Link>
       <Link
         className={`${link} ${isRight}`}
@@ -26,7 +26,7 @@ export default function ArticleFooterNav({ toPrev, toNext }) {
         onMouseEnter={() => setColorRight(YELLOW)}
         onMouseLeave={() => setColorRight(WHITE)}
       >
-        次の記事 <ArrowLeft color={colorRight} />
+        前の記事 <ArrowLeft color={colorRight} />
       </Link>
     </nav>
   )
