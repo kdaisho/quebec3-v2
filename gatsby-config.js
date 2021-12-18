@@ -12,6 +12,10 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-60447968-1',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
       },
     },
     'gatsby-plugin-root-import', // Enables absolute paths for import (e.g. 'src/components' instead of '../../components')
