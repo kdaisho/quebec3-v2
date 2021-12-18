@@ -8,6 +8,7 @@ export default function Profile() {
   const style = {
     border: `3px solid ${NAVY}`,
     borderRadius: '50%',
+    overflow: 'hidden',
     width: SIZE.PROFILE.WIDTH,
   }
   return (
