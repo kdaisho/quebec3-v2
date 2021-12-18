@@ -10,7 +10,7 @@ export default function AboutPage({ data }) {
   return (
     <Layout
       title='Quebec3について'
-      description='Quebec3は日本脱出を目指す日本人のためのブログです'
+      description='Quebec3は日本脱出を目指す日本人のためのブログです。カナダに来た理由や永住権を取った理由についてです。'
     >
       <Hero file={data.file} pageTitle='Quebec3とは' altText='sky' />
       <MainContentWrapper>
