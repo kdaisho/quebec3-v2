@@ -14,16 +14,8 @@
 }
 
 .profile {
-  background: $navy;
-  border: 3px solid $navy;
-  border-radius: 50%;
   height: 200px;
-  overflow: hidden;
   width: 200px;
-
-  img {
-    transform: translateY(-3px);
-  }
 }
 
 .text {

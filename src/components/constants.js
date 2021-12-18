@@ -29,6 +29,6 @@ export const SIZE = {
     MAX_HEIGHT: '500px',
   },
   PROFILE: {
-    WIDTH: '220px',
+    WIDTH: '200px',
   },
 }
