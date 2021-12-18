@@ -15,7 +15,7 @@ export default function Profile() {
     <aside>
       <div className={card}>
         <StaticImage
-          src='../../images/profile-opt.jpg'
+          src='../../images/profile-circle-opt.png'
           alt='kyoshin'
           placeholder='blurred'
           className={profile}
