@@ -60,7 +60,7 @@ export const articleQuery = graphql`
           slug
           body
           frontmatter {
-            date(formatString: "YYYY年DD月MM日")
+            date(formatString: "YYYY年MM月DD日")
             description
             tags
             title
