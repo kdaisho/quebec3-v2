@@ -38,6 +38,7 @@ export default function Seo(props) {
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
       {image && <meta name='twitter:image' content={image} />}
+      <link rel='icon' href='favicon.png' />
     </Helmet>
   )
 }
