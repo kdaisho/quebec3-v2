@@ -42,12 +42,6 @@ export default function IndexPage() {
       ) {
         nodes {
           ...BlogListFragment
-          id
-          frontmatter {
-            description
-            title
-            tags
-          }
         }
       }
     }
