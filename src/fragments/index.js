@@ -10,9 +10,6 @@ export const BlogList = graphql`
       description
       thumb {
         childImageSharp {
-          fluid {
-            src
-          }
           gatsbyImageData(
             width: 120
             height: 120

@@ -22,6 +22,8 @@
 .thumb {
   grid-area: thumb;
 
+  width: 60px;
+
   img,
   picture {
     width: 60px;
@@ -29,8 +31,12 @@
     &:hover {
       opacity: $hoverOpacity;
     }
+  }
 
-    @media (min-width: $mobile) {
+  @media (min-width: $mobile) {
+    width: 120px;
+    img,
+    picture {
       width: 120px;
     }
   }
