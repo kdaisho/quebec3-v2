@@ -71,9 +71,6 @@
 
         &:focus,
         &:hover {
-          color: #fff;
-          text-shadow: 2px 2px 2px $navy;
-
           &:after {
             background: $navy;
             content: '';
