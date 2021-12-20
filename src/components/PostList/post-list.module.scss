@@ -42,6 +42,7 @@
   font-size: $large;
   font-size: 1.25rem;
   font-weight: bold;
+  line-height: $headingLineHeight;
   white-space: normal;
 }
 
@@ -52,6 +53,8 @@
 }
 
 .post-info {
+  display: grid;
+  gap: 0.25rem;
   grid-area: text;
   overflow: hidden;
 }
