@@ -24,13 +24,11 @@
 
   img,
   picture {
+    width: 60px;
+
     &:hover {
       opacity: $hoverOpacity;
     }
-  }
-
-  img {
-    width: 60px;
 
     @media (min-width: $mobile) {
       width: 120px;
