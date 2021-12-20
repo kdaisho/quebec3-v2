@@ -21,7 +21,6 @@
 
 .thumb {
   grid-area: thumb;
-
   width: 60px;
 
   img,
@@ -35,6 +34,7 @@
 
   @media (min-width: $mobile) {
     width: 120px;
+
     img,
     picture {
       width: 120px;
