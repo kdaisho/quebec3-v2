@@ -6,12 +6,12 @@ import React from 'react'
 import { heroContainer } from './hero.module.scss'
 
 export default function Hero({
-  file,
+  hero,
   isHomepage = false,
   pageTitle = 'Quebec3',
   altText = 'quebec3',
 }) {
-  const image = getImage(file)
+  const image = getImage(hero)
   return (
     <div className={heroContainer}>
       <div className='title-btn-container'>

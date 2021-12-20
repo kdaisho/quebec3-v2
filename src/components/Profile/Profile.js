@@ -1,5 +1,10 @@
 import { NAVY, SIZE } from 'src/components/constants'
-import { card, profile, text } from 'src/components/Profile/profile.module.scss'
+import {
+  aside,
+  card,
+  profile,
+  text,
+} from 'src/components/Profile/profile.module.scss'
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -12,7 +17,7 @@ export default function Profile() {
     width: SIZE.PROFILE.WIDTH,
   }
   return (
-    <aside>
+    <aside className={aside}>
       <div className={card}>
         <StaticImage
           src='../../images/profile-circle-opt.png'

@@ -10,15 +10,15 @@ import { graphql } from 'gatsby'
 export default function BlogList({ data, pageContext }) {
   return (
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
-      <Hero file={data.file} pageTitle='投稿記事一覧' altText='pancake' />
+      <Hero hero={data.heroImage} pageTitle='投稿記事一覧' altText='pancake' />
       <MainContentWrapper>
         <div className={blogs}>
           <h1>投稿記事一覧</h1>
           <div className={main}>
-            <PostList posts={data.allMdx.nodes} />
+            <PostList posts={data.allPosts.nodes} />
           </div>
           <Pagination
-            totalCount={data.allMdx.totalCount}
+            totalCount={data.allPosts.totalCount}
             currentPage={pageContext.currentPage}
           />
         </div>
@@ -29,7 +29,7 @@ export default function BlogList({ data, pageContext }) {
 
 export const query = graphql`
   query ($limit: Int!, $skip: Int!) {
-    allMdx(
+    allPosts: allMdx(
       sort: { order: DESC, fields: frontmatter___date }
       limit: $limit
       skip: $skip
@@ -42,7 +42,7 @@ export const query = graphql`
         currentPage
       }
     }
-    file(relativePath: { eq: "quebec3-pancake-opt.jpg" }) {
+    heroImage: file(relativePath: { eq: "quebec3-pancake-opt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           transformOptions: { cropFocus: CENTER }

@@ -6,14 +6,28 @@
 }
 
 .intro {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .main {
   display: grid;
-  gap: 2rem;
-  padding: 3rem 0 4rem;
+  gap: 3rem;
+  padding-bottom: 3rem;
   width: 100%;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 4rem;
+  }
+
+  [class='lists'] {
+    display: grid;
+    gap: 3rem;
+  }
+
+  [class='large-text'] {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
 
   @media (min-width: $tablet) {
     grid-template-columns: auto 1fr;

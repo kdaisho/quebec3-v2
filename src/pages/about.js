@@ -12,7 +12,7 @@ export default function AboutPage({ data }) {
       title='Quebec3について'
       description='Quebec3は日本脱出を目指す日本人のためのブログです。カナダに来た理由や永住権を取った理由についてです。'
     >
-      <Hero file={data.file} pageTitle='Quebec3とは' altText='sky' />
+      <Hero hero={data.heroImage} pageTitle='Quebec3とは' altText='sky' />
       <MainContentWrapper>
         <div className={about}>
           <h1>Quebec3とは</h1>
@@ -70,7 +70,7 @@ export default function AboutPage({ data }) {
 
 export const aboutPageHeroQuery = graphql`
   {
-    file(relativePath: { eq: "quebec3-sky-opt.jpg" }) {
+    heroImage: file(relativePath: { eq: "quebec3-sky-opt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           transformOptions: { cropFocus: CENTER }
