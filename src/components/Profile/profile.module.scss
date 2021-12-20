@@ -1,11 +1,5 @@
 @use 'src/styles/variables' as *;
 
-.aside {
-  @media (min-width: $tablet) {
-    margin-top: 1rem;
-  }
-}
-
 .card {
   background: $primaryColor;
   border-radius: $borderRadius;

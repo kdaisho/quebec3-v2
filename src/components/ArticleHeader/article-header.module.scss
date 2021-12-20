@@ -7,7 +7,7 @@
 
   h1 {
     font-size: $larger;
-    line-height: $h1LineHeight;
+    line-height: $headingLineHeight;
 
     @media (min-width: $mobile) {
       font-size: $super;

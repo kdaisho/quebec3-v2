@@ -76,6 +76,9 @@ export default function IndexPage() {
               <div className='list'>
                 <h2 className='large-text'>最近の記事</h2>
                 <PostList posts={posts} />
+                <Link className='button-like' to='/blogs/1'>
+                  記事一覧へ
+                </Link>
               </div>
               <div className='list'>
                 <h2 className='large-text'>大変な人気の記事</h2>
@@ -84,9 +87,6 @@ export default function IndexPage() {
             </div>
             <Profile />
           </div>
-          <Link className='button-like' to='/blogs/1'>
-            記事一覧へ
-          </Link>
         </div>
       </MainContentWrapper>
     </Layout>

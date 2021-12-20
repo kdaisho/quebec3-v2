@@ -12,21 +12,21 @@
 .main {
   display: grid;
   gap: 3rem;
-  padding-bottom: 3rem;
   width: 100%;
 
-  @media (min-width: $tablet) {
-    padding-bottom: 4rem;
+  [class='lists'] {
+    display: grid;
+    gap: 4rem;
   }
 
-  [class='lists'] {
+  [class='list'] {
     display: grid;
     gap: 3rem;
   }
 
   [class='large-text'] {
     font-size: 2rem;
-    padding-bottom: 2rem;
+    line-height: $headingLineHeight;
   }
 
   @media (min-width: $tablet) {

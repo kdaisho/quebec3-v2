@@ -5,7 +5,7 @@ export const BlogList = graphql`
     id
     slug
     frontmatter {
-      date(formatString: "YYYY年M月DD日")
+      date(formatString: "YYYY年M月D日")
       title
       description
       thumb {
