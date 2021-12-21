@@ -34,6 +34,10 @@
     @include text-link-hover;
     text-decoration: underline;
   }
+
+  ol {
+    padding-left: 1rem;
+  }
 }
 
 .footer-nav {
