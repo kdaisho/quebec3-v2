@@ -27,7 +27,7 @@ export default function Header() {
         <nav className={cn({ expanded: menuExpanded })}>
           <Link to='/'>ホーム</Link>
           <Link to='/blogs/1'>記事一覧</Link>
-          <Link to='/about'>Quebec3について</Link>
+          <Link to='/about'>Quebec3とは</Link>
           <Link to='/contact'>接触を試みる</Link>
         </nav>
       </div>

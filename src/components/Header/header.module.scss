@@ -44,8 +44,7 @@
 
     @media (min-width: $mobile) {
       box-shadow: none;
-      gap: 0.25rem;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(4, auto);
       height: 100%;
       position: initial;
       transform: none;

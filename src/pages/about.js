@@ -17,7 +17,7 @@ export default function AboutPage({ data }) {
         <div className={about}>
           <h1>Quebec3とは</h1>
           <p>
-            Quebec3はカナダのケベック州、モントリオールという街に住む管理人が好き勝手に書いてるブログです。海外移住、カナダでの暮らし、労働環境、日本のことなんかを歪んだ視点から書いてます。
+            Quebec3はカナダのケベック州、Dorvalという街に住む管理人が好き勝手に書いてるブログです。海外移住、カナダでの暮らし、労働環境、日本のことなんかを歪んだ視点から書いてます。
           </p>
           <div className={main}>
             <h2>よくある質問（FAQ）</h2>
