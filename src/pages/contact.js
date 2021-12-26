@@ -1,11 +1,11 @@
-import { Link, graphql } from 'gatsby'
-import { contact, mail } from 'src/styles/contact.module.scss'
 import BackToHome from 'src/components/BackToHome'
 import ContactForm from 'src/components/ContactForm'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import MainContentWrapper from 'src/components/MainContentWrapper'
 import React from 'react'
+import { contact } from 'src/styles/contact.module.scss'
+import { graphql } from 'gatsby'
 
 export default function ContactPage({ data }) {
   return (
@@ -18,7 +18,7 @@ export default function ContactPage({ data }) {
         <div className={contact}>
           <h1>接触を試みる</h1>
           <p>
-            Quebec3はカナダのケベック州、モントリオールという街に住む管理人が好き勝手に書いてるブログです。海外移住、カナダでの暮らし、労働環境、日本のことなんかを歪んだ視点から書いてます。
+            ここからメッセージを送ると、それは光の速さで海を渡り国境を越えカナダの片隅でパンケーキを食わんとする管理人の頭に刺さります。
           </p>
           <ContactForm />
           <BackToHome destination='/' text='ホームへ戻る' />

@@ -1,19 +1,27 @@
 import React, { useRef, useState } from 'react'
+import { field, form } from './contact-form.module.scss'
 import ReCAPTCHA from 'react-google-recaptcha'
 import showToast from 'src/components/Toast'
-import './contact-form.module.scss'
 
 export default function ContactForm() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const initialBody = {
+    name: '',
+    email: '',
+    message: '',
+  }
+  const [body, setBody] = useState(initialBody)
   const reCaptchaRef = useRef()
 
-  const handleSendMessage = async e => {
-    e.preventDefault()
+  const handleChange = ({ target }) => {
+    setBody({ ...body, [target.name]: target.value })
+  }
+
+  const handleSubmit = async event => {
+    event.preventDefault()
     const url = 'http://localhost:9000/send'
     const token = await reCaptchaRef.current.executeAsync()
     reCaptchaRef.current.reset()
+    const { name, email, message } = body
 
     try {
       const response = await fetch(url, {
@@ -30,44 +38,64 @@ export default function ContactForm() {
       })
       const { text, kind } = await response.json()
       showToast({ message: text, kind })
+      setBody(initialBody)
     } catch (err) {
       showToast({ message: '送信失敗。本文が長すぎるのかも。', kind: 'error' })
     }
   }
 
   return (
-    <form>
-      <label htmlFor='name'>Name</label>
-      <input
-        type='text'
-        id='name'
-        name='name'
-        onChange={e => setName(e.target.value)}
-        placeholder='Your name..'
-      />
-      <label htmlFor='email'>Email</label>
-      <input
-        type='text'
-        id='email'
-        name='email'
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        placeholder='Your email'
-      />
-      <label htmlFor='message'>Message</label>
-      <textarea
-        id='message'
-        name='message'
-        value={message}
-        onChange={e => setMessage(e.target.value)}
-        placeholder='Write something..'
-      />
+    <form className={form} onSubmit={handleSubmit} autoComplete='off'>
+      <p>
+        *メール欄は、返信先を記載せず一方的に質問を送ってくるおっちょこちょいのために設けています。管理人からの返事を期待しない君は適当なアドレスをでっちあげとけ。
+      </p>
+      <div className={field}>
+        <label htmlFor='name'>名前</label>
+        <input
+          type='text'
+          id='name'
+          name='name'
+          value={body.name}
+          onChange={handleChange}
+          placeholder='名無しさん'
+          maxLength='45'
+          pattern='.*\S+.*'
+          required
+        />
+      </div>
+      <div className={field}>
+        <label htmlFor='email'>メール*</label>
+        <input
+          type='email'
+          id='email'
+          name='email'
+          value={body.email}
+          onChange={handleChange}
+          placeholder='example@gmail.com'
+          maxLength='45'
+          pattern='.*\S+.*'
+          required
+        />
+      </div>
+      <div className={field}>
+        <label htmlFor='message'>メッセージ</label>
+        <textarea
+          id='message'
+          name='message'
+          value={body.message}
+          rows='10'
+          onChange={handleChange}
+          maxLength='2500'
+          placeholder='最大2500文字です。'
+          required
+        />
+      </div>
       <ReCAPTCHA
         sitekey='6Ld2E8gdAAAAAA-_fAfI8AgdSocYMKhsf4DfZf5h'
         size='invisible'
         ref={reCaptchaRef}
       />
-      <button type='submit' onClick={handleSendMessage}>
+      <button type='submit' className='submit'>
         Submit
       </button>
     </form>

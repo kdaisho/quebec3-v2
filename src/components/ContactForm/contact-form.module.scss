@@ -1,0 +1,54 @@
+@use 'src/styles/variables' as *;
+
+.form {
+  background: $primaryColor;
+  border-radius: $borderRadius;
+  display: grid;
+  gap: 1rem;
+  margin: 4rem auto;
+  padding: 1.25rem;
+  max-width: $formWidth;
+
+  p {
+    background: $transparentNavy;
+    border-radius: $borderRadius;
+    color: $navy;
+    line-height: $defaultLineHeight;
+    padding: 0.5rem;
+  }
+
+  button {
+    background: $navy;
+    color: $primaryColor;
+
+    &:hover {
+      background: transparent;
+      border: 1px solid $navy;
+      color: $navy;
+    }
+  }
+}
+
+.field {
+  display: flex;
+  flex-flow: column nowrap;
+
+  label {
+    color: $navy;
+  }
+
+  input,
+  textarea {
+    color: $navy;
+    border: none;
+    border-radius: $borderRadius;
+    font-size: 1rem;
+    line-height: $defaultLineHeight;
+    max-width: calc($formWidth - 45px);
+    padding: 0.5rem;
+  }
+
+  input {
+    height: 2rem;
+  }
+}

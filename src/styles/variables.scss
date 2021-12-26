@@ -5,7 +5,7 @@ $larger: 2rem;
 $large: 1.25rem;
 $small: 16px;
 $lineHeight: 2;
-$headingLineHeight: 1.4;
+$defaultLineHeight: 1.4;
 $contentPadding: 0 1.25rem;
 
 // color
@@ -15,11 +15,14 @@ $white: #d6defe;
 $yellow: #ffca28;
 $success: #4caf50;
 $error: #e91e63;
+$transparentNavy: rgba(17, 20, 33, 0.25);
+
 // breakpoint
 $mobile: 768px;
 $tablet: 1024px;
 
 // others
+$formWidth: 620px;
 $borderRadius: 4px;
 $shadowSize: 12px;
 $articleMaxWidth: 680px;
