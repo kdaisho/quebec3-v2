@@ -18,7 +18,8 @@ export default function ContactForm() {
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const url = 'http://localhost:9000/send'
+    // const url = 'http://localhost:9000/send'
+    const url = 'http://167.71.161.228:9000/send'
     const token = await reCaptchaRef.current.executeAsync()
     reCaptchaRef.current.reset()
     const { name, email, message } = body
