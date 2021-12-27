@@ -19,7 +19,7 @@ export default function ContactForm() {
   const domain =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:9000'
-      : 'https://quebec3.com'
+      : 'https://daishodesign.com'
 
   const handleSubmit = async event => {
     event.preventDefault()

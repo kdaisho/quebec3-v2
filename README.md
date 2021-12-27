@@ -9,6 +9,11 @@ Quebec3 Blog - Revamp using Gatsby
 - Open `http://localhost:8000`
 - GraphQL playground is available at `http://localhost:8000/___graphql`
 
+## Deployment
+
+- Run `npm run build` to build UI
+- Email service is provided by daishodesign
+
 ## Eslint
 
 Eslint has been set. To use it, install eslint either locally or globally (globally is recommended)
