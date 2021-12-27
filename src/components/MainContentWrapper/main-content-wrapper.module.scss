@@ -1,5 +1,7 @@
 @use 'src/styles/variables' as *;
 
 .main-content {
+  @include content-wrapper;
+  margin: 2.5rem auto 5rem;
   padding: $contentPadding;
 }

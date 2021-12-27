@@ -1,5 +1,5 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { homepage, intro, main } from 'src/styles/index.module.scss'
+import { intro, main } from 'src/styles/index.module.scss'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import MainContentWrapper from 'src/components/MainContentWrapper'
@@ -59,28 +59,26 @@ export default function IndexPage() {
         altText='black cat'
       />
       <MainContentWrapper>
-        <div className={homepage}>
-          <p className={intro}>
-            Quebec3は、モントリオール島在住の日本人により2015年から運営されている気ままな個人のブログです。カナダでの生活ぶりを勝手な視点から書いています。
-            このブログには将来海外に住んでみたいと思っている人、留学を考えている人、日本国籍を捨てたい人、日本の劣悪な労働環境からの脱出を考えている人、日本の中抜き文化に酷く失望してる人、そんな人たちの思いを加速させる効果があります。
-            これまで日本だけでずーっと過ごして来た人、英語を勉強している人、海外で働きたい人、ポテチの袋が上手に開けられない人、皆で仲良くQuebec3を読んで勝手に衝撃を受けて下さい。
-          </p>
-          <div className={main}>
-            <div className='lists'>
-              <div className='list'>
-                <h2 className='large-text'>最近の記事</h2>
-                <PostList posts={posts} />
-                <Link className='button-like' to='/blogs/1'>
-                  記事一覧へ
-                </Link>
-              </div>
-              <div className='list'>
-                <h2 className='large-text'>大変な人気の記事</h2>
-                <PostList posts={popularPosts} />
-              </div>
+        <p className={intro}>
+          Quebec3は、モントリオール島在住の日本人により2015年から運営されている気ままな個人のブログです。カナダでの生活ぶりを勝手な視点から書いています。
+          このブログには将来海外に住んでみたいと思っている人、留学を考えている人、日本国籍を捨てたい人、日本の劣悪な労働環境からの脱出を考えている人、日本の中抜き文化に酷く失望してる人、そんな人たちの思いを加速させる効果があります。
+          これまで日本だけでずーっと過ごして来た人、英語を勉強している人、海外で働きたい人、ポテチの袋が上手に開けられない人、皆で仲良くQuebec3を読んで勝手に衝撃を受けて下さい。
+        </p>
+        <div className={main}>
+          <div className='lists'>
+            <div className='list'>
+              <h2 className='large-text'>最近の記事</h2>
+              <PostList posts={posts} />
+              <Link className='button-like' to='/blogs/1'>
+                記事一覧へ
+              </Link>
             </div>
-            <Profile />
+            <div className='list'>
+              <h2 className='large-text'>大変な人気の記事</h2>
+              <PostList posts={popularPosts} />
+            </div>
           </div>
+          <Profile />
         </div>
       </MainContentWrapper>
     </Layout>

@@ -1,13 +1,16 @@
+import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
-import { Link } from 'gatsby'
+import MainContentWrapper from 'src/components/MainContentWrapper'
 import React from 'react'
 
 export default function PageNotFound() {
   return (
     <Layout>
-      <h1>Umm 404 Page Not Found</h1>
-      <p>お探しのページは見つかりませんでした。</p>
-      <Link to='/'>ホームページへ戻る</Link>
+      <MainContentWrapper>
+        <h1>Hum, 404 Page Not Found</h1>
+        <p>お探しのページは見つかりませんでした。</p>
+        <BackToHome destination='/' text='ホームへ戻る' />
+      </MainContentWrapper>
     </Layout>
   )
 }

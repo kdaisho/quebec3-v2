@@ -1,14 +1,5 @@
 @use 'src/styles/variables' as *;
 
-.about {
-  @include content-wrapper;
-  margin: 3em auto 5rem;
-}
-
-.main {
-  margin: 3rem auto 4rem;
-}
-
 .questions {
   display: grid;
   gap: 1rem;

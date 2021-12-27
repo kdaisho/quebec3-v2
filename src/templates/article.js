@@ -10,7 +10,6 @@ import ArticleHeader from 'src/components/ArticleHeader'
 import BackToHome from 'src/components/BackToHome'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import MainContentWrapper from 'src/components/MainContentWrapper'
 import React from 'react'
 import { graphql } from 'gatsby'
 
@@ -32,21 +31,19 @@ export default function Article({ data, pageContext }) {
           />
         </div>
       )}
-      <MainContentWrapper>
-        <article className={article}>
-          <ArticleHeader date={date} title={title} tags={tags} />
-          <div className={articleBody}>
-            <MDXRenderer>{node.body}</MDXRenderer>
-          </div>
-          <ArticleFooterNav toPrev={toPrev} toNext={toNext} />
-          <nav className={footerNav}>
-            <BackToHome
-              destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}
-              text='記事一覧へ戻るぞぉ'
-            />
-          </nav>
-        </article>
-      </MainContentWrapper>
+      <article className={article}>
+        <ArticleHeader date={date} title={title} tags={tags} />
+        <div className={articleBody}>
+          <MDXRenderer>{node.body}</MDXRenderer>
+        </div>
+        <ArticleFooterNav toPrev={toPrev} toNext={toNext} />
+        <nav className={footerNav}>
+          <BackToHome
+            destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}
+            text='記事一覧へ戻るぞぉ'
+          />
+        </nav>
+      </article>
     </Layout>
   )
 }

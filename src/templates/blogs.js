@@ -1,4 +1,3 @@
-import { blogs, main } from 'src/styles/blogs.module.scss'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import MainContentWrapper from 'src/components/MainContentWrapper'
@@ -12,16 +11,14 @@ export default function BlogList({ data, pageContext }) {
     <Layout title='投稿記事一覧' description='Quebec3の投稿記事一覧ページ'>
       <Hero hero={data.heroImage} pageTitle='投稿記事一覧' altText='pancake' />
       <MainContentWrapper>
-        <div className={blogs}>
-          <h1>投稿記事一覧</h1>
-          <div className={main}>
-            <PostList posts={data.allPosts.nodes} />
-          </div>
-          <Pagination
-            totalCount={data.allPosts.totalCount}
-            currentPage={pageContext.currentPage}
-          />
+        <h1>投稿記事一覧</h1>
+        <div className='content-margin'>
+          <PostList posts={data.allPosts.nodes} />
         </div>
+        <Pagination
+          totalCount={data.allPosts.totalCount}
+          currentPage={pageContext.currentPage}
+        />
       </MainContentWrapper>
     </Layout>
   )

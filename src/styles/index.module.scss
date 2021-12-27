@@ -1,10 +1,5 @@
 @use 'src/styles/variables' as *;
 
-.homepage {
-  @include content-wrapper;
-  margin: 2.5rem auto 5rem;
-}
-
 .intro {
   margin-bottom: 3rem;
 }
