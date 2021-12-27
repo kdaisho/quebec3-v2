@@ -12,7 +12,7 @@ Quebec3 Blog - Revamp using Gatsby
 ## Deployment
 
 - Run `npm run build` to build UI
-- Email service is provided by daishodesign
+- Run `pm2 start --name quebec3 src/server/server.js --watch` to run the server (Required for production)
 
 ## Eslint
 

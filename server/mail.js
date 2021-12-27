@@ -11,16 +11,12 @@ const transport = nodemailer.createTransport({
 })
 
 const validateHuman = async (token, res) => {
-  console.log('============= RECAPTHA TOKEN', token)
-  console.log('============= RECAPTHA KEY', process.env.RECAPTCHA_SECRET_KEY)
   try {
     const { data } = await axios.post(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
     )
-    console.log('============= RECAPTHA DATA', data)
     return data.success
   } catch (err) {
-    console.log('============= RECAPTHA ERROR', err)
     return res.status(500).send({
       kind: 'error',
       text: 'ごめん。人間とロボットを区別するプログラムが失敗。',
@@ -29,9 +25,7 @@ const validateHuman = async (token, res) => {
 }
 
 exports.sendMessage = async (req, res) => {
-  console.log('======= sending message', req.body)
   const isHuman = await validateHuman(req.body.token, res)
-  console.log('======= isHuman', isHuman)
 
   if (!isHuman) {
     return res.status(400).send({

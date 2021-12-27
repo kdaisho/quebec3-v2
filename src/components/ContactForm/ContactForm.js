@@ -17,25 +17,19 @@ export default function ContactForm() {
   }
 
   const domain =
-    process.env.NODE_ENV === 'development'
+    process.env.NODE_ENV === 'development' // added by Gatsby
       ? 'http://localhost:9000'
-      : // : 'https://daishodesign.com'
-        'https://quebec3.com'
+      : 'https://quebec3.com'
 
   const handleSubmit = async event => {
     event.preventDefault()
     const token = await reCaptchaRef.current.executeAsync()
-    console.log('============ recqptcha token', token)
-    if (!token) return null
     reCaptchaRef.current.reset()
     const { name, email, message } = body
 
     try {
       const response = await fetch(`${domain}/send`, {
         method: 'POST',
-        // mode: 'same-origin',
-        // mode: 'cors',
-        // mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -101,7 +95,6 @@ export default function ContactForm() {
         />
       </div>
       <ReCAPTCHA
-        // sitekey='6Lc7kkkcAAAAAEin0TkCgCe0UlZzUPcLsvRDanPr'
         sitekey='6Ld2E8gdAAAAAA-_fAfI8AgdSocYMKhsf4DfZf5h'
         size='invisible'
         ref={reCaptchaRef}
