@@ -4,7 +4,7 @@ module.exports = {
   },
   extends: 'react-app',
   rules: {
-    'no-console': [2],
+    'no-console': [1],
     'sort-imports': [
       'error',
       {

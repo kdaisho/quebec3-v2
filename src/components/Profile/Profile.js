@@ -1,30 +1,16 @@
-import { NAVY, SIZE } from 'src/components/constants'
-import {
-  aside,
-  card,
-  profile,
-  text,
-} from 'src/components/Profile/profile.module.scss'
+import { card, profile, text } from 'src/components/Profile/profile.module.scss'
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Profile() {
-  // Use inline as css is too slow to trim image; user can see it
-  const style = {
-    border: `3px solid ${NAVY}`,
-    borderRadius: '50%',
-    overflow: 'hidden',
-    width: SIZE.PROFILE.WIDTH,
-  }
   return (
-    <aside className={aside}>
+    <aside>
       <div className={card}>
         <StaticImage
           src='../../images/profile-circle-opt.png'
           alt='kyoshin'
           placeholder='blurred'
           className={profile}
-          style={style}
         />
         <div className={text}>
           <p>性格悪そーなこの人が書いてます。</p>

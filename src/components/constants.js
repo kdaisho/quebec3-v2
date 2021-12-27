@@ -28,7 +28,4 @@ export const SIZE = {
     MIN_HEIGHT: '300px',
     MAX_HEIGHT: '500px',
   },
-  PROFILE: {
-    WIDTH: '200px',
-  },
 }

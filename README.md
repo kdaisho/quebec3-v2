@@ -31,3 +31,7 @@ When developing using `gatsby develop`, Gatsby uses a default 404 page that over
 ### `gatsby serve` not working
 
 Before running `npm run serve`, run `npm run build` first.
+
+## Environment variables
+
+`NODE_ENV` ('development' | 'production') is automatically added to Webpack by Gatsby, but only for client-side. For server-side code (e.g. ./services/\*), this has to be explicitly added in `.env` file.

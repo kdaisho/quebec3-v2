@@ -16,16 +16,19 @@ export default function ContactForm() {
     setBody({ ...body, [target.name]: target.value })
   }
 
+  const domain =
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:9000'
+      : 'https://quebec3.com'
+
   const handleSubmit = async event => {
     event.preventDefault()
-    // const url = 'http://localhost:9000/send'
-    const url = 'http://167.71.161.228:9000/send'
     const token = await reCaptchaRef.current.executeAsync()
     reCaptchaRef.current.reset()
     const { name, email, message } = body
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(`${domain}/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
