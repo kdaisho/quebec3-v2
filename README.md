@@ -1,6 +1,6 @@
 # Quebec3 - Gatsby
 
-Test: Quebec3 Blog - Revamp using Gatsby
+Test 2: Quebec3 Blog - Revamp using Gatsby
 
 ## Development
 
