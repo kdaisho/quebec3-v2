@@ -1,9 +1,10 @@
-// require('dotenv').config({
-//   path: '.env',
-// })
+require('dotenv').config({
+  path: '.env',
+})
 
 const express = require('express')
-// const mail = require('./mail')
+// const bodyParser = require('body-parser')
+const mail = require('./mail')
 const app = express()
 app.disable('x-powered-by')
 
@@ -15,13 +16,19 @@ app.disable('x-powered-by')
 // })
 app.use(express.static('public'))
 app.use(express.json({ limit: '8kb' }))
+// app.use(bodyParser.json())
+// app.use(
+//   bodyParser.urlencoded({
+//     extended: true,
+//   })
+// )
 
 // support for quebec3 mail service
 app.use((req, res, next) => {
-  console.log('======= ORIGIN', req.get('origin'))
+  // console.log('======= ORIGIN', req.get('origin'))
   // res.header('Access-Control-Allow-Origin', 'https://quebec3.com')
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8000')
-  // res.header('Access-Control-Allow-Origin', '*')
+  // res.header('Access-Control-Allow-Origin', 'http://localhost:8000')
+  res.header('Access-Control-Allow-Origin', '*')
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept, Authorization'
@@ -43,16 +50,16 @@ app.use((req, res, next) => {
 //   next()
 // })
 
-// app.post('/send', mail.sendMessage)
-app.post('/send', (req, res, next) => {
-  console.log('============= send again!')
-  res.end()
-})
+app.post('/send', mail.sendMessage)
+// app.post('/send', (req, res, next) => {
+//   console.log('============= send again! req.body', req.body)
+//   res.end()
+// })
 
 // app.listen(process.env.PORT, () => {
 app.listen(9000, () => {
   // console.group()
   // console.log(`[client] Listening on port ⚡⚡⚡ 3000 ⚡⚡⚡`)
-  console.log(`[server] Listening on port ⚡⚡⚡ ${9000} ⚡⚡⚡`)
+  console.log(`[server] --- Listening on port ⚡⚡⚡ ${9000} ⚡⚡⚡`)
   // console.groupEnd()
 })
