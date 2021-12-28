@@ -6,7 +6,7 @@ import {
   text,
 } from 'src/components/Profile/profile.module.scss'
 import { StaticImage } from 'gatsby-plugin-image'
-import SubscribeForm from 'src/components/SubscribeForm'
+import SubscriptionForm from 'src/components/SubscriptionForm'
 
 export default function Profile() {
   const [showSubscription, setShowSubscription] = useState(false)
@@ -36,7 +36,7 @@ export default function Profile() {
         </button>
       </div>
       {showSubscription && (
-        <SubscribeForm setShowSubscription={setShowSubscription} />
+        <SubscriptionForm setShowSubscription={setShowSubscription} />
       )}
     </aside>
   )

@@ -6,11 +6,11 @@ import {
   form,
   honeyField,
   notification,
-} from './subscribe-form.module.scss'
+} from './subscription-form.module.scss'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import showToast from 'src/components/Toast'
 
-export default function SubscribeForm({ setShowSubscription }) {
+export default function SubscriptionForm({ setShowSubscription }) {
   const initialBody = {
     email: '',
     honey: '',
