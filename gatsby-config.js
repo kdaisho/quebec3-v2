@@ -9,6 +9,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          '//quebec3.us11.list-manage.com/subscribe/post?u=a9b3dcc0985f0772454a9bc96&amp;id=0fd7be20c8',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-60447968-1',
