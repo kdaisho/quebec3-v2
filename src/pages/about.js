@@ -22,7 +22,7 @@ export default function AboutPage({ data }) {
           <h2>よくある質問（FAQ）</h2>
           <div className={questions}>
             <div>
-              <p>🤔❔ なんでカナダに移住したんですか？</p>
+              <p>🤔❔ なんでカナダに移住したんですか？ </p>
               <p>😎❕ カナダ人と結婚したからです。後に離婚しましたけど。</p>
             </div>
             <div>
@@ -33,7 +33,7 @@ export default function AboutPage({ data }) {
               </p>
             </div>
             <div>
-              <p>🤔❔ 英語はカナダで学んだのですか？</p>
+              <p>🤔🤔❔ 英語はカナダで学んだのですか？</p>
               <p>
                 😎❕ 日本で話せるようにしておきました。
                 <Link to='/blog/interview'></Link>

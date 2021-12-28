@@ -6,7 +6,6 @@ import MainContentWrapper from 'src/components/MainContentWrapper'
 import PostList from 'src/components/PostList'
 import Profile from 'src/components/Profile'
 import React from 'react'
-import SubscribeForm from 'src/components/SubscribeForm'
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -82,7 +81,6 @@ export default function IndexPage() {
           <Profile />
         </div>
       </MainContentWrapper>
-      <SubscribeForm />
     </Layout>
   )
 }

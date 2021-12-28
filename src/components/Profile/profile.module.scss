@@ -21,3 +21,29 @@
 .text {
   padding: 1.25rem 0 0;
 }
+
+.is-newsletter {
+  display: grid;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  h3,
+  span {
+    color: $navy;
+    line-height: $defaultLineHeight;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  button {
+    background: $navy;
+    color: $primaryColor;
+
+    &:hover {
+      border: 1px solid $navy;
+      color: $navy;
+    }
+  }
+}

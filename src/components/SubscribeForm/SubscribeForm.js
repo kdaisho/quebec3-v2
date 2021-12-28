@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
+import {
+  backdrop,
+  close,
+  field,
+  form,
+  honeyField,
+  notification,
+} from './subscribe-form.module.scss'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { honeyField } from './subscribe-form.module.scss'
 import showToast from 'src/components/Toast'
 
-export default function SubscribeForm() {
+export default function SubscribeForm({ setShowSubscription }) {
   const initialBody = {
     email: '',
     honey: '',
   }
   const [body, setBody] = useState(initialBody)
-
   const handleChange = ({ target }) => {
     setBody({ ...body, [target.name]: target.value })
   }
@@ -17,7 +23,7 @@ export default function SubscribeForm() {
   const handleSubmit = async event => {
     event.preventDefault()
     if (body.honey) {
-      // I know, this is lame, hope it helps
+      // mc doesn't accept reCaptcha, hope this helps
       return null
     }
     // api returns 200 regardlessly, try & catch won't work here
@@ -31,10 +37,26 @@ export default function SubscribeForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} autoComplete='off'>
-      <div id='mc_embed_signup_scroll'>
+    <>
+      <form className={form} onSubmit={handleSubmit} autoComplete='off'>
+        <button
+          type='button'
+          className={close}
+          onClick={() => setShowSubscription(false)}
+        >
+          &#10005;
+        </button>
         <h2>新着記事お知らせサービス</h2>
-        <div className='mc-field-group'>
+        <p>
+          ここからメアドを登録することにより新着記事のお知らせが届くようになります。
+        </p>
+        <p>
+          Quebec3は管理人の気まぐれに完全に頼り切っているため「年に数回程度」しか更新しないブログ界の絶滅危惧種です。忘却を防ぐためにも登録しましょう。
+        </p>
+        <p className={notification}>
+          届いたメールに記載されたリンクをクリックすることでいつでも登録を解除できます。
+        </p>
+        <div className={field}>
           <label htmlFor='email-field'>メールアドレス</label>
           <input
             id='email-field'
@@ -56,10 +78,14 @@ export default function SubscribeForm() {
             value={body.honey}
           />
         </div>
-        <div>
-          <input type='submit' value='Subscribe' />
-        </div>
-      </div>
-    </form>
+        <button type='submit' className='submit'>
+          送　信
+        </button>
+      </form>
+      <div
+        className={backdrop}
+        onClick={() => setShowSubscription(false)}
+      ></div>
+    </>
   )
 }

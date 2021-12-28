@@ -1,22 +1,4 @@
 @use 'src/styles/variables' as *;
-@mixin button-style {
-  background: $primaryColor;
-  border: 1px solid $primaryColor;
-  border-radius: $borderRadius;
-  color: $navy;
-  font-size: $baseFontSize;
-  height: 45px;
-  padding: 0 1.25rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &:not(.submit):hover {
-    background: transparent;
-    color: $primaryColor;
-  }
-}
 
 html,
 body {

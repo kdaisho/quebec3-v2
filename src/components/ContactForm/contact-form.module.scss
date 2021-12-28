@@ -8,14 +8,7 @@
   margin: 4rem auto;
   padding: 1.25rem;
   max-width: $formWidth;
-
-  p {
-    background: $transparentNavy;
-    border-radius: $borderRadius;
-    color: $navy;
-    line-height: $defaultLineHeight;
-    padding: 0.5rem;
-  }
+  width: 100%;
 
   button {
     background: $navy;
@@ -27,6 +20,10 @@
       color: $navy;
     }
   }
+}
+
+.notification {
+  @include notification-style;
 }
 
 .field {

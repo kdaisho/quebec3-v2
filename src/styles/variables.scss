@@ -28,7 +28,7 @@ $shadowSize: 12px;
 $articleMaxWidth: 680px;
 $pageMaxWidth: 1380px;
 $headerHeight: 70px;
-$cardWidth: 240px;
+$cardWidth: 250px;
 $hoverOpacity: 0.6;
 $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
@@ -48,4 +48,31 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 @mixin content-wrapper {
   max-width: $pageMaxWidth;
   width: 100%;
+}
+
+@mixin button-style {
+  background: $primaryColor;
+  border: 1px solid $primaryColor;
+  border-radius: $borderRadius;
+  color: $navy;
+  font-size: $baseFontSize;
+  height: 45px;
+  padding: 0 1.25rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:not(.submit):hover {
+    background: transparent;
+    color: $primaryColor;
+  }
+}
+
+@mixin notification-style {
+  background: $transparentNavy;
+  border-radius: $borderRadius;
+  color: $navy;
+  line-height: $defaultLineHeight;
+  padding: 0.5rem;
 }

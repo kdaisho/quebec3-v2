@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { field, form } from './contact-form.module.scss'
+import { field, form, notification } from './contact-form.module.scss'
 import ReCAPTCHA from 'react-google-recaptcha'
 import showToast from 'src/components/Toast'
 
@@ -50,7 +50,7 @@ export default function ContactForm() {
 
   return (
     <form className={form} onSubmit={handleSubmit} autoComplete='off'>
-      <p>
+      <p className={notification}>
         *メール欄は、返信先を記載せず一方的に質問を送ってくるおっちょこちょいのために設けています。管理人からの返事を期待しない君は適当なアドレスをでっちあげとけ。
       </p>
       <div className={field}>
@@ -100,7 +100,7 @@ export default function ContactForm() {
         ref={reCaptchaRef}
       />
       <button type='submit' className='submit'>
-        Submit
+        送　信
       </button>
     </form>
   )
