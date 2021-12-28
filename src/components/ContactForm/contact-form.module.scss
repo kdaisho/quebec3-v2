@@ -1,24 +1,12 @@
 @use 'src/styles/variables' as *;
 
 .form {
-  background: $primaryColor;
-  border-radius: $borderRadius;
-  display: grid;
-  gap: 1rem;
-  margin: 4rem auto;
-  padding: 1.25rem;
+  @include form-base-style;
   max-width: $formWidth;
-  width: 100%;
+  margin: 4rem auto;
 
   button {
-    background: $navy;
-    color: $primaryColor;
-
-    &:hover {
-      background: transparent;
-      border: 1px solid $navy;
-      color: $navy;
-    }
+    @include form-button-style;
   }
 }
 

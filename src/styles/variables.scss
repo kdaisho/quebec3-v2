@@ -63,10 +63,30 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
   }
 
-  &:not(.submit):hover {
+  &:hover {
     background: transparent;
     color: $primaryColor;
   }
+}
+
+@mixin form-button-style {
+  background: $navy;
+  color: $primaryColor;
+
+  &:hover {
+    background: transparent;
+    border: 1px solid $navy;
+    color: $navy;
+  }
+}
+
+@mixin form-base-style {
+  background: $primaryColor;
+  border-radius: $borderRadius;
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  width: 100%;
 }
 
 @mixin notification-style {
@@ -75,4 +95,17 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: $navy;
   line-height: $defaultLineHeight;
   padding: 0.5rem;
+}
+
+@mixin card-style {
+  background: $primaryColor;
+  border-radius: $borderRadius;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  width: $cardWidth;
+
+  h2,
+  p {
+    color: $navy;
+  }
 }

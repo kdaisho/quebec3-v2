@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
-import {
-  card,
-  isNewsletter,
-  profile,
-  text,
-} from 'src/components/Profile/profile.module.scss'
+import { card, profile, text } from 'src/components/Profile/profile.module.scss'
+import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import SubscriptionForm from 'src/components/SubscriptionForm'
 
 export default function Profile() {
-  const [showSubscription, setShowSubscription] = useState(false)
-
   return (
     <aside>
       <div className={card}>
@@ -29,15 +21,6 @@ export default function Profile() {
           </p>
         </div>
       </div>
-      <div className={`${card} ${isNewsletter}`}>
-        <h3>記事更新通知サービス</h3>
-        <button onClick={() => setShowSubscription(true)}>
-          手続方法について
-        </button>
-      </div>
-      {showSubscription && (
-        <SubscriptionForm setShowSubscription={setShowSubscription} />
-      )}
     </aside>
   )
 }

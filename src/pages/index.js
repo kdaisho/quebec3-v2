@@ -1,10 +1,10 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { intro, main } from 'src/styles/index.module.scss'
+import Aside from 'src/components/Aside'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import MainContentWrapper from 'src/components/MainContentWrapper'
 import PostList from 'src/components/PostList'
-import Profile from 'src/components/Profile'
 import React from 'react'
 
 export default function IndexPage() {
@@ -78,7 +78,7 @@ export default function IndexPage() {
               <PostList posts={popularPosts} />
             </div>
           </div>
-          <Profile />
+          <Aside />
         </div>
       </MainContentWrapper>
     </Layout>

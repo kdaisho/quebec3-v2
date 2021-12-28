@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {
   backdrop,
-  close,
   field,
   form,
   honeyField,
@@ -41,7 +40,7 @@ export default function SubscriptionForm({ setShowSubscription }) {
       <form className={form} onSubmit={handleSubmit} autoComplete='off'>
         <button
           type='button'
-          className={close}
+          className='close-modal'
           onClick={() => setShowSubscription(false)}
         >
           &#10005;
@@ -79,7 +78,7 @@ export default function SubscriptionForm({ setShowSubscription }) {
           />
         </div>
         <button type='submit' className='submit'>
-          送　信
+          送信
         </button>
       </form>
       <div

@@ -100,7 +100,7 @@ export default function ContactForm() {
         ref={reCaptchaRef}
       />
       <button type='submit' className='submit'>
-        送　信
+        送信
       </button>
     </form>
   )
