@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from 'react'
 import { DURATION } from './constants'
 import { toast } from './toast.module.scss'
 
-const Toast = ({ message, kind }) => {
+const Toast = ({ message, kind, _duration }) => {
   const timeoutIds = useMemo(() => [], [])
 
   useEffect(() => {
@@ -10,7 +10,7 @@ const Toast = ({ message, kind }) => {
     timeoutIds.push(
       window.setTimeout(() => {
         toastElements[0].remove()
-      }, DURATION)
+      }, _duration || DURATION)
     )
 
     return () => {

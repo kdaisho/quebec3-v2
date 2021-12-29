@@ -26,13 +26,18 @@ export default function SubscriptionForm({ setShowSubscription }) {
       return null
     }
     // api returns 200 regardlessly, try & catch won't work here
-    const { msg, result } = await addToMailchimp(body.email)
+    const { result } = await addToMailchimp(body.email)
     // translation required for error message only
     const message =
       result === 'error'
-        ? '登録に失敗しました。後でもう一度トライしてください。'
-        : msg
-    showToast({ message, kind: result })
+        ? '登録失敗。既に登録してませんか？'
+        : '登録完了！確認のメールを送ります。迷惑メールフォルダに行くかもしれないので、そこも確認してください。'
+
+    showToast({
+      message,
+      kind: result,
+      duration: 7000,
+    })
   }
 
   return (
@@ -50,10 +55,10 @@ export default function SubscriptionForm({ setShowSubscription }) {
           ここからメアドを登録することにより新着記事のお知らせが届くようになります。
         </p>
         <p>
-          Quebec3は管理人の気まぐれに完全に頼り切っているため「年に数回程度」しか更新しないブログ界の絶滅危惧種です。忘却を防ぐためにも登録しましょう。
+          Quebec3の更新は管理人の気まぐれによるところが大きいためその頻度は年に数回程度です。忘却を防ぐためにも登録しましょう。
         </p>
         <p className={notification}>
-          届いたメールに記載されたリンクをクリックすることでいつでも登録を解除できます。
+          登録すると確認のメールが自動で届きますが迷惑メールフォルダに行っちゃう可能性もあります。メールに記載されたリンクをクリックすることでいつでも登録を解除できます。
         </p>
         <div className={field}>
           <label htmlFor='email-field'>メールアドレス</label>
