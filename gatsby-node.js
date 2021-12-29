@@ -1,5 +1,5 @@
-const { ITEMS_PER_PAGE } = require('./constants')
 const path = require('path')
+const ITEMS_PER_PAGE = 20
 
 exports.createPages = async ({ graphql, actions }) => {
   await Promise.all([

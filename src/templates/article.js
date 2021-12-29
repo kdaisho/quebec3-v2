@@ -8,6 +8,7 @@ import {
 import ArticleFooterNav from 'src/components/ArticleFooterNav'
 import ArticleHeader from 'src/components/ArticleHeader'
 import BackToHome from 'src/components/BackToHome'
+import { ITEMS_PER_PAGE } from 'src/components/constants'
 import Layout from 'src/components/Layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
@@ -39,7 +40,9 @@ export default function Article({ data, pageContext }) {
         <ArticleFooterNav toPrev={toPrev} toNext={toNext} />
         <nav className={footerNav}>
           <BackToHome
-            destination={`/blogs/${Math.ceil(pageContext.currentPage / 10)}`}
+            destination={`/blogs/${Math.ceil(
+              pageContext.currentPage / ITEMS_PER_PAGE
+            )}`}
             text='記事一覧へ戻るぞぉ'
           />
         </nav>

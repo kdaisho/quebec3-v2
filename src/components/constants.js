@@ -22,7 +22,7 @@ export const PRIMARY = '#bdddff'
 export const YELLOW = '#ffca28'
 export const PATH_DEFAULT_THUMB = '../../default-thumb.svg'
 
-export const ITEMS_PER_PAGE = 10
+export const ITEMS_PER_PAGE = 20
 export const SIZE = {
   HERO: {
     MIN_HEIGHT: '300px',
