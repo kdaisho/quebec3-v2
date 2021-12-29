@@ -1,12 +1,17 @@
 @use 'src/styles/variables' as *;
 
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
 .card {
   @include card-style;
 }
 
 .is-newsletter {
   display: grid;
-  margin-top: 2rem;
   gap: 1rem;
 
   h3,
