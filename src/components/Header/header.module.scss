@@ -101,6 +101,11 @@
   }
 }
 
+.backdrop {
+  @include backdrop-style;
+  z-index: 30;
+}
+
 .hamburger {
   font: inherit;
   display: inline-block;
