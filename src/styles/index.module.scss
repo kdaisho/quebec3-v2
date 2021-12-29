@@ -6,7 +6,7 @@
 
 .main {
   display: grid;
-  gap: 3rem;
+  gap: 4rem;
   width: 100%;
 
   [class='lists'] {
@@ -25,6 +25,7 @@
   }
 
   @media (min-width: $tablet) {
+    gap: 2.5rem;
     grid-template-columns: auto 1fr;
   }
 }

@@ -1,36 +1,15 @@
 @use 'src/styles/variables' as *;
 
-.sidebar {
+.aside {
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
-}
+  margin: 0 auto;
+  max-width: 330px;
+  text-align: center;
 
-.card {
-  @include card-style;
-}
-
-.is-newsletter {
-  display: grid;
-  gap: 1rem;
-
-  h3,
-  span {
-    color: $navy;
-    line-height: $defaultLineHeight;
-  }
-
-  span {
-    white-space: nowrap;
-  }
-
-  button {
-    background: $navy;
-    color: $primaryColor;
-
-    &:hover {
-      border: 1px solid $navy;
-      color: $navy;
-    }
+  @media (min-width: $tablet) {
+    text-align: left;
+    width: $cardWidth;
   }
 }

@@ -1,0 +1,30 @@
+@use 'src/styles/variables' as *;
+
+.card {
+  @include card-style;
+}
+
+.is-newsletter {
+  display: grid;
+  gap: 1rem;
+
+  h3,
+  span {
+    color: $navy;
+    line-height: $defaultLineHeight;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  button {
+    background: $navy;
+    color: $primaryColor;
+
+    &:hover {
+      border: 1px solid $navy;
+      color: $navy;
+    }
+  }
+}

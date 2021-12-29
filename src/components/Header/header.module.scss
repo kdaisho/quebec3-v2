@@ -77,6 +77,10 @@
         border: none;
         position: relative;
 
+        &:first-child {
+          border: none;
+        }
+
         &[class='is-active'],
         &:focus {
           opacity: 1;

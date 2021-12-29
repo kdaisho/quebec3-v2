@@ -4,8 +4,9 @@ $super: 6rem;
 $larger: 2rem;
 $large: 1.25rem;
 $small: 16px;
-$lineHeight: 2;
 $defaultLineHeight: 1.4;
+$mediumLineHeight: 1.8;
+$largeLineHeight: 2;
 $contentPadding: 0 1.25rem;
 
 // color
@@ -102,11 +103,12 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: $borderRadius;
   margin: 0 auto;
   padding: 1.25rem 1rem;
-  width: $cardWidth;
+  width: 100%;
 
   h2,
   p {
     color: $navy;
+    line-height: $mediumLineHeight;
   }
 }
 

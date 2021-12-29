@@ -2,6 +2,10 @@
 
 .main-content {
   @include content-wrapper;
-  margin: 2.5rem auto 5rem;
+  margin: 2.5rem auto 4rem;
   padding: $contentPadding;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 5rem;
+  }
 }
