@@ -16,9 +16,10 @@ import menuItems from './menu-items'
 export default function Header() {
   const [logoColor, setLogoColor] = useState(LOGO.DEFAULT)
   const [menuExpanded, setMenuExpanded] = useState(false)
+  const isBrowser = typeof window !== 'undefined'
 
   const isCurrentPage = path => {
-    return window.location.pathname === path
+    return isBrowser ? window.location.pathname === path : false
   }
 
   return (
