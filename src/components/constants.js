@@ -29,3 +29,10 @@ export const SIZE = {
     MAX_HEIGHT: '500px',
   },
 }
+
+export const PATH = {
+  HOME: '/',
+  BLOGS: '/blogs/1',
+  ABOUT: '/about',
+  CONTACT: '/contact',
+}

@@ -9,18 +9,24 @@ import {
 import { LOGO } from 'src/components/constants'
 import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
+import { PATH } from 'src/components/constants'
 import cn from 'classnames'
+import menuItems from './menu-items'
 
 export default function Header() {
   const [logoColor, setLogoColor] = useState(LOGO.DEFAULT)
   const [menuExpanded, setMenuExpanded] = useState(false)
+
+  const isCurrentPage = path => {
+    return window.location.pathname === path
+  }
 
   return (
     <>
       <header className={header}>
         <div className={container}>
           <Link
-            to='/'
+            to={PATH.HOME}
             onMouseEnter={() => setLogoColor(LOGO.HOVERED)}
             onMouseLeave={() => setLogoColor(LOGO.DEFAULT)}
           >
@@ -31,18 +37,23 @@ export default function Header() {
             />
           </Link>
           <nav className={cn({ expanded: menuExpanded })}>
-            <Link to='/'>ホーム</Link>
-            <Link to='/blogs/1'>記事一覧</Link>
-            <Link to='/about'>Quebec3とは</Link>
-            <Link to='/contact'>接触を試みる</Link>
+            {menuItems.map(item => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={cn({ 'is-active': isCurrentPage(item.path) })}
+                onClick={() => setMenuExpanded(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
         </div>
-
         <button
           className={menuButton}
           onClick={() => setMenuExpanded(ex => !ex)}
         >
-          <div className={cn({ 'is-active': menuExpanded }, hamburger)}>
+          <div className={cn({ 'is-expanded': menuExpanded }, hamburger)}>
             <div className='hamburger-box'>
               <div className='hamburger-inner'></div>
             </div>

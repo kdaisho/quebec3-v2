@@ -60,6 +60,15 @@
       font-weight: bold;
       padding: 0 1rem;
 
+      &[class='is-active'],
+      &:focus {
+        opacity: 0.5;
+      }
+
+      &:first-child {
+        border-top: 1px solid $navy;
+      }
+
       &:last-child {
         border-bottom: none;
       }
@@ -68,8 +77,10 @@
         border: none;
         position: relative;
 
-        &:focus,
-        &:hover {
+        &[class='is-active'],
+        &:focus {
+          opacity: 1;
+
           &:after {
             background: $navy;
             content: '';
@@ -161,7 +172,7 @@
     }
   }
 
-  &[class^='is-active'] {
+  &[class^='is-expanded'] {
     [class='hamburger-inner']:before {
       top: 0;
       transition: top 0.1s ease,

@@ -1,6 +1,7 @@
 import { LOGO } from 'src/components/constants'
 import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
+import { PATH } from 'src/components/constants'
 import React from 'react'
 import { footer } from './footer.module.scss'
 
@@ -9,7 +10,7 @@ export default function Footer() {
   return (
     <footer className={footer}>
       <div className='wrapper'>
-        <Link to='/'>
+        <Link to={PATH.HOME}>
           <Logo
             outline={LOGO.DEFAULT.outline}
             inner={LOGO.DEFAULT.inner}

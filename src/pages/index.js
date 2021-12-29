@@ -4,6 +4,7 @@ import Aside from 'src/components/Aside'
 import Hero from 'src/components/Hero'
 import Layout from 'src/components/Layout'
 import MainContentWrapper from 'src/components/MainContentWrapper'
+import { PATH } from 'src/components/constants'
 import PostList from 'src/components/PostList'
 import React from 'react'
 
@@ -69,7 +70,7 @@ export default function IndexPage() {
             <div className='list'>
               <h2 className='large-text'>最近の記事</h2>
               <PostList posts={posts} />
-              <Link className='button-like' to='/blogs/1'>
+              <Link className='button-like' to={PATH.BLOGS}>
                 記事一覧へ
               </Link>
             </div>

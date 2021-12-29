@@ -2,6 +2,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { NAVY, PRIMARY, SIZE } from 'src/components/constants'
 import { Link } from 'gatsby'
 import Logo from 'src/svg/Logo'
+import { PATH } from 'src/components/constants'
 import React from 'react'
 import { heroContainer } from './hero.module.scss'
 
@@ -22,7 +23,7 @@ export default function Hero({
           <h2>{pageTitle}</h2>
         </div>
         {isHomepage && (
-          <Link className='button-like' to='/blogs/1'>
+          <Link className='button-like' to={PATH.BLOGS}>
             記事一覧
           </Link>
         )}
