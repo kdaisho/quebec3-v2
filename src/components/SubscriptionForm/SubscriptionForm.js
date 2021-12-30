@@ -50,7 +50,9 @@ export default function SubscriptionForm({ setShowSubscription }) {
         >
           &#10005;
         </button>
-        <h2>新着記事お知らせサービス</h2>
+        <h2>
+          新着記事お知らせ<span>サービス</span>
+        </h2>
         <p>
           ここからメアドを登録することにより新着記事のお知らせが届くようになります。
         </p>

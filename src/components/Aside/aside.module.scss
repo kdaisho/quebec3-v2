@@ -8,7 +8,7 @@
   max-width: 330px;
   text-align: center;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     text-align: left;
     width: $cardWidth;
   }

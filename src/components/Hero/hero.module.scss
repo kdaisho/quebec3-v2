@@ -32,7 +32,7 @@
       svg {
         width: 280px;
 
-        @media (min-width: $mobile) {
+        @media (min-width: $tablet) {
           width: auto;
         }
       }

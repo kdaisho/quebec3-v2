@@ -2,6 +2,7 @@
 
 .form {
   @include form-base-style;
+  gap: 1rem;
   max-width: $formWidth;
   margin: 4rem auto;
 

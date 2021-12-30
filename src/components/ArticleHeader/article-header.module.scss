@@ -9,7 +9,7 @@
     font-size: $larger;
     line-height: $defaultLineHeight;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $tablet) {
       font-size: $super;
     }
   }

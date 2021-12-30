@@ -42,7 +42,7 @@
       transform: translateX(0);
     }
 
-    @media (min-width: $mobile) {
+    @media (min-width: $tablet) {
       box-shadow: none;
       grid-template-columns: repeat(4, auto);
       height: 100%;
@@ -73,7 +73,7 @@
         border-bottom: none;
       }
 
-      @media (min-width: $mobile) {
+      @media (min-width: $tablet) {
         border: none;
         position: relative;
 
@@ -111,7 +111,7 @@
   height: 60px;
   padding: 0;
 
-  @media (min-width: $mobile) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }

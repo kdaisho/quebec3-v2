@@ -19,8 +19,9 @@ $error: #e91e63;
 $transparentNavy: rgba(17, 20, 33, 0.25);
 
 // breakpoint
-$mobile: 768px;
-$tablet: 1024px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
 
 // others
 $formWidth: 620px;
@@ -58,6 +59,7 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: $navy;
   font-size: $baseFontSize;
   height: 45px;
+  min-height: 45px;
   padding: 0 1.25rem;
 
   &:hover {
@@ -85,8 +87,7 @@ $boxShadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: $primaryColor;
   border-radius: $borderRadius;
   display: grid;
-  gap: 1rem;
-  padding: 1.25rem;
+  padding: 1.5rem 1.25rem;
   width: 100%;
 }
 
