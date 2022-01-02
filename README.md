@@ -19,19 +19,15 @@ CI/CD using Github actions has been set. Pushing changes to master triggers the 
 
 1. Pushing your changes to master triggers Github actions
 2. Action runner copies `dist/` to `/var/www/quebec3/` after build
-3. .env file has been set within `/var/www/quebec3/`
-
-PM2 is set as
+3. PM2 is always running with the command below
 
 ```bash
 pm2 start --name qc3 /home/ubuntu/actions-runner/deploy/quebec3-v2/quebec3-v2/server/index.js --watch
 ```
 
-- Run `npm run build` to build UI
-- Run `pm2 start --name quebec3 src/server/server.js --watch` to run the server (Required for production)
+4. Action runner just restarts the pm2 process
 
-You cannot complete the deployment only with Git Hooks anyway, as you have to manually build the application.
-I've also tried to set up Github actions, but it didn't complete the build process with unknown reason. It may be due to lack of memory as I tried that before creating a swap file.
+Github actions started working after creating a swap file to increase available resource (RAM).
 To increase RAM by creating a swap file, read [this article](<https://github.com/kdaisho/Blog/wiki/How-to-increase-memory-(RAM)-on-DigitalOcean-Droplets-for-free>).
 
 ## Eslint
