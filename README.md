@@ -13,13 +13,14 @@ Quebec3 Blog - Revamp using Gatsby
 
 ### Github actions
 
-CI/CD using Github actions has been set. Pushing changes to master triggers the runner.
+CI/CD pipeline using Github actions has been set. Pushing changes to master triggers the runner.
 
-### CI/CD process
+### CI/CD process details
 
 1. Pushing your changes to master triggers Github actions
-2. Action runner copies `dist/` to `/var/www/quebec3/` after build
-3. PM2 is always running with the command below
+2. Action runner copies `public/` to `/var/www/quebec3/` after a successful build
+3. Nginx fetches index.html from `/var/www/quebec3/public` folder, not directly from the source code dumped by the action-runner. By doing so we can eliminate downtime from 10 - 12 min to practically zero.
+4. PM2 is always running with the command below
 
 ```bash
 pm2 start --name qc3 /home/ubuntu/actions-runner/deploy/quebec3-v2/quebec3-v2/server/index.js --watch
@@ -27,7 +28,7 @@ pm2 start --name qc3 /home/ubuntu/actions-runner/deploy/quebec3-v2/quebec3-v2/se
 
 4. Action runner just restarts the pm2 process
 
-Github actions started working after creating a swap file to increase available resource (RAM).
+We used have problems with Github actions due to lack of memory. Creating a swap file for 2GB allowed us to run it. Github actions has been running without a hitch since then.
 To increase RAM by creating a swap file, read [this article](<https://github.com/kdaisho/Blog/wiki/How-to-increase-memory-(RAM)-on-DigitalOcean-Droplets-for-free>).
 
 ## Eslint

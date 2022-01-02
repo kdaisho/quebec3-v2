@@ -75,7 +75,7 @@ export default function IndexPage() {
               </Link>
             </div>
             <div className='list'>
-              <h2 className='large-text'>大変なぁ人気の記事</h2>
+              <h2 className='large-text'>大変な人気の記事</h2>
               <PostList posts={popularPosts} />
             </div>
           </div>
