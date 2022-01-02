@@ -11,7 +11,21 @@ Quebec3 Blog - Revamp using Gatsby
 
 ## Deployment
 
-Git Hooks hasn't been set for this project. To update files, login to the server then run `git pull` from origin.
+### Github actions
+
+CI/CD using Github actions has been set. Pushing changes to master triggers the runner.
+
+### CI/CD process
+
+1. Pushing your changes to master triggers Github actions
+2. Action runner copies `dist/` to `/var/www/quebec3/` after build
+3. .env file has been set within `/var/www/quebec3/`
+
+PM2 is set as
+
+```bash
+pm2 start --name qc3 /home/ubuntu/actions-runner/deploy/quebec3-v2/quebec3-v2/server/index.js --watch
+```
 
 - Run `npm run build` to build UI
 - Run `pm2 start --name quebec3 src/server/server.js --watch` to run the server (Required for production)
