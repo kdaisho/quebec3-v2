@@ -48,11 +48,11 @@ exports.sendMessage = async (req, res) => {
   }
 
   const mailOptions = {
-    from: `Daisho <noreply@${process.env}>`,
+    from: `Quebec3 <noreply@${process.env}>`,
     to: process.env.MAIL_DESTINATION,
-    subject: `Message from ${sender.name} via portfolio`,
-    text: `Name: ${sender.name}. Content: ${sender.msg} Email: ${sender.email}`,
-    html: `<p>Name: ${sender.name}</p><br><p>Message: ${sender.msg}</p><br><p>Email: ${sender.email}</p>`,
+    subject: `${sender.name}さんからメッセージです。`,
+    text: `名前: ${sender.name} 本文: ${sender.msg} メールアドレス: ${sender.email}`,
+    html: `<p><strong>名前</strong>: ${sender.name}</p><br><p><strong>本文</strong>: ${sender.msg}</p><br><p><strong>メールアドレス</strong>: ${sender.email}</p>`,
   }
 
   return transport.sendMail(mailOptions, err => {
