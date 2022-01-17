@@ -68,7 +68,7 @@ export default function AboutPage({ data }) {
 
 export const aboutPageHeroQuery = graphql`
   {
-    heroImage: file(relativePath: { eq: "quebec3-sky-opt.jpg" }) {
+    heroImage: file(relativePath: { eq: "st-lawrence-opt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           transformOptions: { cropFocus: CENTER }

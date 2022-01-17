@@ -19,7 +19,7 @@ export default function IndexPage() {
           ...BlogListFragment
         }
       }
-      heroImage: file(relativePath: { eq: "quebec3-cat-opt.jpg" }) {
+      heroImage: file(relativePath: { eq: "airline-bottom-opt.jpg" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { cropFocus: CENTER }
