@@ -6,17 +6,20 @@ export default function Profile() {
   return (
     <div className={card}>
       <StaticImage
-        src='../../images/profile-circle-opt.png'
+        src='../../images/profile-circle-2022-opt.png'
         alt='kyoshin'
         placeholder='blurred'
         className={profile}
       />
       <div className={text}>
-        <p>性格悪そーなこの人が書いてます。</p>
+        <p>
+          性格悪いそうなこの人は大変な事を書く。日本語を書くことに凝っている。宜しけれ。疑い。（integration悪い。）
+        </p>
         <h2>Kyoshin</h2>
         <p>
           2010年よりモントリオール島在住のカナダ市民権保持者。
-          元陸上自衛官で現在はWeb屋。 カレー好き。
+          陸上自衛隊に7年、現在カナダでSoftware Engineer。
+          カレーを目に入れるの好き。
         </p>
       </div>
     </div>

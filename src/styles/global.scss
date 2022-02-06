@@ -52,6 +52,10 @@ img {
   margin: 3rem auto 4rem;
 }
 
+.link-static-highlight {
+  @include link-highlight;
+}
+
 .iframe-container {
   overflow: hidden;
   position: relative;

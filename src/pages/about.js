@@ -12,9 +12,9 @@ export default function AboutPage({ data }) {
       title='Quebec3について'
       description='Quebec3は日本脱出を目指す日本人のためのブログです。カナダに来た理由や永住権を取った理由についてです。'
     >
-      <Hero hero={data.heroImage} pageTitle='Quebec3とは' altText='sky' />
+      <Hero hero={data.heroImage} pageTitle='これ書いてる人' altText='sky' />
       <MainContentWrapper>
-        <h1>Quebec3とは</h1>
+        <h1>これ書いてる人</h1>
         <p>
           Quebec3はカナダのケベック州、Dorvalという街に住む管理人が好き勝手に書いてるブログです。海外移住、カナダでの暮らし、労働環境、日本のことなんかを歪んだ視点から書いてます。
         </p>
@@ -33,10 +33,16 @@ export default function AboutPage({ data }) {
               </p>
             </div>
             <div>
-              <p>🤔🤔❔ 英語はカナダで学んだのですか？</p>
+              <p>🤔❔ 英語はカナダで学んだのですか？</p>
               <p>
                 😎❕ 日本で話せるようにしておきました。
-                <Link to='/blog/interview'></Link>
+                <Link
+                  className='link-static-highlight'
+                  to='https://englishhub.jp/feature/komiyama.html'
+                  target='_blank'
+                >
+                  訓練みたいな英語学習法
+                </Link>
               </p>
             </div>
             <div>
@@ -52,11 +58,14 @@ export default function AboutPage({ data }) {
             </div>
             <div>
               <p>🤔❔ 現在のお仕事は？ </p>
-              <p>😎❕ Web屋です。毎日お家でカタカタしてます。</p>
+              <p>
+                😎❕ Software Development
+                Engineerです。毎日お家でカタカタしてます。
+              </p>
             </div>
             <div>
               <p>🤔❔ カナダは好きですか？ </p>
-              <p>😎❕ ベストですね。</p>
+              <p>😎❕ そりゃそうさ。</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const menuItems = [
   },
   {
     path: PATH.ABOUT,
-    name: 'Quebec3とは',
+    name: 'これ書いてる人',
   },
   {
     path: PATH.CONTACT,
