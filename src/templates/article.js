@@ -22,7 +22,7 @@ export default function Article({ data, pageContext }) {
   const image = getImage(data.mdx.frontmatter.hero)
 
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} description={description} image={image}>
       {image && (
         <div className={featuredImage}>
           <GatsbyImage
