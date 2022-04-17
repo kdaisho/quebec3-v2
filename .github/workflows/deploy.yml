@@ -23,6 +23,19 @@ jobs:
         node-version: [16.x]
 
     steps:
+      - name: Create .env file
+        run: echo "Creating .env for ${{ secrets.MAIL_USER }}"
+        uses: SpicyPizza/create-envfile@v1.3.0
+        with:
+          NODE_ENV: production
+          PORT: 9000
+          MAIL_USER: ${{ secrets.MAIL_USER }}
+          MAIL_PASS: ${{ secrets.MAIL_PASS }}
+          MAIL_HOST: ${{ secrets.MAIL_HOST }}
+          MAIL_PORT: ${{ secrets.MAIL_PORT }}
+          MAIL_DESTINATION: ${{ secrets.MAIL_DESTINATION }}
+          RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
+
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
