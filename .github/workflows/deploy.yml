@@ -23,6 +23,12 @@ jobs:
         node-version: [16.x]
 
     steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
       - name: Create env file
         run: |
           echo "Creating .env for ${{ secrets.MAIL_USER }}"
@@ -35,15 +41,7 @@ jobs:
           echo MAIL_PORT=${{ secrets.MAIL_PORT }} >> .env
           echo MAIL_DESTINATION=${{ secrets.MAIL_DESTINATION }} >> .env
           echo RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }} >> .env
-          echo API_KEY=${{ secrets.API_KEY }} >> .env
           cat .env
-
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
       - run: npm run build --if-present
       - run: cp -r public /var/www/quebec3/
       # - run: pm2 start --name qc3 server/index.js --watch # for the initial deployment
