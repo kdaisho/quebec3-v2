@@ -23,8 +23,9 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - name: Create .env file
+      - name: Starting steps
         run: echo "Creating .env for ${{ secrets.MAIL_USER }}"
+      - name: Create .env file
         uses: SpicyPizza/create-envfile@v1.3.0
         with:
           NODE_ENV: production
