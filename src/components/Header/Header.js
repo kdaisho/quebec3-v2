@@ -24,12 +24,7 @@ export default function Header() {
 
   return (
     <>
-      <header
-        className={header}
-        data-host-location={window.parent?.location}
-        data-host-location-origin={window.parent?.location?.origin}
-        data-current-location={window.location}
-      >
+      <header className={header}>
         <div className={container}>
           <Link
             to={PATH.HOME}
