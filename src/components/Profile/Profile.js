@@ -6,15 +6,13 @@ export default function Profile() {
   return (
     <div className={card}>
       <StaticImage
-        src='../../images/profile-circle-2022-opt.png'
+        src='../../images/profile-circle-2022-02-opt.webp'
         alt='kyoshin'
         placeholder='blurred'
         className={profile}
       />
       <div className={text}>
-        <p>
-          このオッサンが怒ったり困ったりしたことをテキトーな文体と心構えで書いてます。
-        </p>
+        <p>このオッサンが怒ったり困ったりしたことをテキトーに書いてます。</p>
         <h2>Kyoshin</h2>
         <p>
           2010年よりモントリオール島在住のカナダ市民権保持者。
