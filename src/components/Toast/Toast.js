@@ -18,7 +18,7 @@ const Toast = ({ message, kind, _duration }) => {
         clearTimeout(timeoutIds.shift())
       }
     }
-  }, [timeoutIds])
+  }, [_duration, timeoutIds])
 
   return <div className={`${toast} ${kind}`}>{message}</div>
 }

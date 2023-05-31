@@ -59,8 +59,11 @@ Before running `npm run serve`, run `npm run build` first.
 `NODE_ENV` ('development' | 'production') is automatically added to Webpack by Gatsby, but only for client-side. For server-side code (e.g. ./server/\*), this has to be explicitly added in `.env` file.
 
 ## Environment variable: MAIL_PASS
+
 Changed mail password from the password for quebec3 google account to newly created app password. (April 16, 2022)
+
 ### How I setup the password
+
 - Go to google account
 - Go to "Security" from left hand-side menu
 - Find "Signing in to Google" section
@@ -71,3 +74,8 @@ Changed mail password from the password for quebec3 google account to newly crea
 - Click "Generate" -> Password is provided
 - Save the password somewhere safe
 - Use the password for SMTP mail authentication (.env file: MAIL_PASS variable)
+
+## Starting the process manually via SSH
+
+- Go to where the project files are located. It is under `./actions-runner/...`
+- Start PM2 process: `pm2 start --name qc3 server/index.js --watch`
