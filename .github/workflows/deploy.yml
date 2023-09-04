@@ -43,6 +43,6 @@ jobs:
           echo RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }} >> .env
           cat .env
       - run: npm run build --if-present
-      - run: cp -r public /var/www/quebec3/
+      - run: cp -r public /var/www/quebec3.com/
       - run: pm2 delete qc3 # start PM2 clean slate
-      - run: pm2 start --name qc3 /var/www/quebec3/server/index.js --watch
+      - run: pm2 start --name qc3 /var/www/quebec3.com/server/index.js --watch
