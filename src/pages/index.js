@@ -57,7 +57,7 @@ export default function IndexPage() {
         hero={data.heroImage}
         isHomepage={true}
         pageTitle='- 海外移住ポータル -'
-        altText='black cat'
+        altText='aircraft'
       />
       <MainContentWrapper>
         <p className={intro}>
