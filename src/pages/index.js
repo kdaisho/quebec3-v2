@@ -19,7 +19,7 @@ export default function IndexPage() {
           ...BlogListFragment
         }
       }
-      heroImage: file(relativePath: { eq: "airline-bottom-opt.jpg" }) {
+      heroImage: file(relativePath: { eq: "airplane-generative.webp" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { cropFocus: CENTER }
