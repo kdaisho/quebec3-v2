@@ -26,7 +26,7 @@ export const ITEMS_PER_PAGE = 20
 export const SIZE = {
   HERO: {
     MIN_HEIGHT: '300px',
-    MAX_HEIGHT: '500px',
+    MAX_HEIGHT: '950px',
   },
 }
 

@@ -36,6 +36,7 @@ export default function Hero({
         style={{
           minHeight: SIZE.HERO.MIN_HEIGHT,
           maxHeight: SIZE.HERO.MAX_HEIGHT,
+          width: '100%',
         }}
       />
     </div>
